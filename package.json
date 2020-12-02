@@ -1,0 +1,17 @@
+{
+  "name": "slideshow-dist",
+  "version": "1.0.0",
+  "description": "Slideshow distribution",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "Khan Kibria",
+  "license": "Use for slide presentation allowed",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "livereload": "^0.9.1",
+    "polka": "^0.5.2",
+    "sirv": "^1.0.7"
+  }
+}
