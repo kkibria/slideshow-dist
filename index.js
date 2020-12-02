@@ -9,8 +9,7 @@ var server = livereload.createServer({
 server.watch(__dirname + "/public");
 
 const assets = sirv('public', {
-    maxAge: 10, // 10 sec
-    immutable: true
+    dev: true
 });
 
 polka()
