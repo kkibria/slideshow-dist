@@ -1,8 +1,34 @@
-hello
+# SlideShow
+
+<img class="s25" src="images/Schulprojekt_Hilden-001.jpg">
+
+([Attribution](https://commons.wikimedia.org/w/index.php?curid=1592973))
+
+## Definition
+
+According to [wikipedia](https://en.wikipedia.org/wiki/Slide_show), "A slide show is a presentation
+of a series of still images on a projection screen or electronic display device, typically in a
+prearranged sequence". 
+
+Press Down-arrow to go to the next slide.
 
 
-images/Schulprojekt_Hilden-001.jpg
+# The Markdown file
 
-https://en.wikipedia.org/wiki/Slide_show
+**The previous slide content was made by the following Markdown text,**
 
-By No machine-readable author provided. Frank Schulenburg assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=1592973
+```
+<img class="s25" src="images/Schulprojekt_Hilden-001.jpg">
+
+([Attribution](https://commons.wikimedia.org/w/index.php?curid=1592973))
+
+## Definition
+
+According to 
+[wikipedia](https://en.wikipedia.org/wiki/Slide_show),
+"A slide show is a presentation of a series of still
+images on a projection screen or electronic display
+device, typically in a prearranged sequence". 
+
+Press Down-arrow to go to the next slide.
+```
