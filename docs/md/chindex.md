@@ -1,4 +1,4 @@
-<img class="s25" src="Schulprojekt_Hilden-001.jpg">
+<img class="s25" src="images/Schulprojekt_Hilden-001.jpg">
 
 [Attribution](https://commons.wikimedia.org/w/index.php?curid=1592973)
 
