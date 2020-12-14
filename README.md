@@ -24,9 +24,8 @@ Don't get me wrong, I did like remark. I liked it that much that I actually have
 it's style by using it's css file in this app. 
 # How to install
 
-You need to have [nodejs](https://nodejs.org/en/) installed from the site before you can use this tool. 
-
-Copy the files from my repositary to your computer using one of the following methods into a directory of your choice. Let's assume the directory is ``my_slides``.
+1. You need to have [nodejs](https://nodejs.org/en/) installed from the site before you can use this tool. 
+2. Copy the files from my repositary to your computer using one of the following methods into a directory of your choice. Let's assume the directory is ``my_slides``.
 
 ## Using git
 ```
