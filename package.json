@@ -4,8 +4,13 @@
   "description": "Slideshow distribution",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "deploy": "node publish"
   },
+  "publishDirs": [
+    "md",
+    "images"
+  ],
   "author": "Khan Kibria",
   "license": "Use for slide presentation allowed",
   "homepage": "https://kkibria.github.io/slideshow-dist/",
@@ -14,5 +19,9 @@
     "livereload": "^0.9.1",
     "polka": "^0.5.2",
     "sirv": "^1.0.7"
+  },
+  "devDependencies": {
+    "mkdirp": "^1.0.4",
+    "ncp": "^2.0.0"
   }
 }
