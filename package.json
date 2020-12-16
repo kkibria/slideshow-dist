@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node .",
-    "deploy": "node publish"
+    "prepare": "node prepare"
   },
   "publishDirs": [
     "md",
