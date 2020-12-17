@@ -19,7 +19,7 @@ nobreak: True
 ```
 # The Source file
 
-**The previous slide was made by simply typing the following content in a regulat text file,**
+**The previous slide was made by simply typing the following content in a regular text file,**
 
 ```
 # SlideShow
@@ -36,7 +36,7 @@ According to
 images on a projection screen or electronic display
 device, typically in a prearranged sequence". 
 
-Press Down-arrow to go to the next slide.
+Press Down-Arrow to go to the next slide.
 ```
 
 ```$
@@ -71,11 +71,10 @@ into multiple slides.
 - Use front matter to create a new slide.
 
 ## Navigating thru the slide show is simple
-You can use, 
+You can use PageUp, PageDown,
 ``↑`` [Up-Arrow],
-``↓`` [Down-Arrow],
-``→`` [Right-Arrow]	or
-``←`` [Left-Arrow] keys to navigate.
+``↓`` [Down-Arrow], ``→`` [Right-Arrow]	or  
+``←`` [Left-Arrow] keys or simply mouse-wheel to navigate between the pages.
 
 # Front Matter
 In front of a slide or group of slides we can attach front matter. In the front
