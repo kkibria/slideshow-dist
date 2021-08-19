@@ -55,7 +55,8 @@ Go to ``my_slides`` directory. Now start the application,
 npm start
 ```
 
-Now open your browser and goto <http://localhost:5000/> which will show you a slide. To edit the slide go to ``public/md`` directory and
+Now open your browser and goto <http://localhost:5000/> which will show you a slide.
+To edit the slide go to ``public/md`` directory and
 edit the markdown file. This is the directory that will hold all the markdown files. As you
 save the updated markdown file, the browser will
 live refresh the updates in the slide view in your browser.
@@ -68,4 +69,10 @@ npm run prepare
 ```
 
 When completed, simply copy all the files and folders in ``docs`` directory to your
-web server.
+web server. 
+
+This is convenient, if you keep your ``my_slides`` content in github repo for version management
+then you wont need a web server. Go to repo settings, scroll down to github pages section
+and just edit ``source`` setting to select ``docs`` folder for your web.
+
+Check <https://pages.github.com/> and select **project** for more information.
