@@ -67,5 +67,5 @@ Go to ``my_slides`` directory. Now prepare the files,
 npm run prepare
 ```
 
-When completed, simply copy all the files in ``docs`` directory to your
+When completed, simply copy all the files and folders in ``docs`` directory to your
 web server.
