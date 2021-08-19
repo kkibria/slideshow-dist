@@ -16,9 +16,9 @@
   "homepage": "https://kkibria.github.io/slideshow-dist/",
   "dependencies": {
     "compression": "^1.7.4",
-    "livereload": "^0.9.1",
+    "livereload": "^0.9.3",
     "polka": "^0.5.2",
-    "sirv": "^1.0.7"
+    "sirv": "^1.0.14"
   },
   "devDependencies": {
     "mkdirp": "^1.0.4",

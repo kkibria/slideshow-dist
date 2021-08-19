@@ -45,6 +45,7 @@ After download,
 ```
 cd my_slides
 npm install
+npm update
 ```
 
 # Start slideshow
