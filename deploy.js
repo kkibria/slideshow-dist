@@ -16,8 +16,8 @@ const Bright = "\x1b[1m";
 const Dim = "\x1b[2m";
 const Normal = "\x1b[22m";
 
-const src_pfx = "public/";
-const dst_pfx = "docs/";
+const src_pfx = "dev/";
+const dst_pfx = "public/";
 const branch = "gh-pages";
 
 ncp.limit = 16;

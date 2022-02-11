@@ -6,9 +6,9 @@ var livereload = require('livereload');
 var server = livereload.createServer({
     extraExts: ['md']
 });
-server.watch(__dirname + "/public");
+server.watch(__dirname + "/dev");
 
-const assets = sirv('public', {
+const assets = sirv('dev', {
     dev: true
 });
 

@@ -65,7 +65,7 @@ live refresh the updates in the slide view in your browser.
 Go to ``my_slides`` directory. Now prepare the files,
 
 ```
-npm run prepare
+npm run deploy
 ```
 
 When completed, simply copy all the files and folders in ``docs`` directory to your
