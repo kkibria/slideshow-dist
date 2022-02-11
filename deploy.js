@@ -16,6 +16,7 @@ const Bright = "\x1b[1m";
 const Dim = "\x1b[2m";
 const Normal = "\x1b[22m";
 
+const dist_pfx = "dist/";
 const src_pfx = "dev/";
 const dst_pfx = "public/";
 const branch = "gh-pages";
@@ -47,6 +48,16 @@ async function do_n2p(spec) {
     await Promise.all(pr_list);
 }
 
+async function copy_bundle() {
+    const bld_pfx = dst_pfx + "build/"
+    const bld = path.resolve(bld_pfx);
+    await mkdir(bld, { recursive: true });
+    let fn = "bundle.js";
+    await copyFile(dist_pfx + fn, bld_pfx + fn);
+    fn = "bundle.css";
+    await copyFile(dist_pfx + fn, bld_pfx + fn);
+}
+
 async function publish() {
     let s = await readFile('package.json');
     let pkg = JSON.parse(s);
@@ -54,6 +65,7 @@ async function publish() {
     let docs = path.resolve(dst_pfx);
     await mkdir(docs, { recursive: true });
     await do_n2p(copy_spec);
+    await copy_bundle();
 }
 
 async function commit(msg) {

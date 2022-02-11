@@ -9,7 +9,6 @@
     "deploy": "node deploy"
   },
   "publishDirs": [
-    "build",
     "md",
     "images",
     "favicon.png",
