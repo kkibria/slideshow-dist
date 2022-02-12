@@ -8,6 +8,7 @@ import { default as mkdirp } from 'mkdirp';
 import { default as path } from 'path';
 import { default as NodeGit } from 'nodegit';
 import { execFile } from 'child_process';
+import { getopt } from 'stdio';
 
 const Reset = "\x1b[0m";
 const FgGreen = "\x1b[32m";
@@ -75,7 +76,7 @@ async function commit(msg) {
     try {
         docsrepo = await NodeGit.Repository.open(docs);
         const remote = await docsrepo.getRemote('origin');
-    } catch(e) {
+    } catch (e) {
         const pathToRepo = path.resolve(".");
         const repo = await NodeGit.Repository.open(pathToRepo);
         const url = (await repo.getRemote('origin')).url();
@@ -106,17 +107,24 @@ async function push() {
     console.log(stderr);
 }
 
-async function deploy() {
+async function deploy(bCommit) {
     console.log(FgCyan + '\n:: Deploying from "public" to "docs"' + Reset);
     let start = new Date();
     await publish();
-    await commit("publish");
+    if (bCommit) {
+        console.log(FgGreen + '\n:: Pushing to remote.' + Reset);
+        await commit("publish");
+    }
     let end = new Date() - start;
     console.log(FgGreen + '\n:: Deploy completed in %dms.' + Reset, end);
 }
 
 try {
-    deploy();
-} catch(e) {
+    const ops = getopt({
+        'push': { key: 'p', description: 'push to remote git' },
+    });
+    console.log(ops);
+    deploy(ops.push);
+} catch (e) {
     console.error("error.");
 }

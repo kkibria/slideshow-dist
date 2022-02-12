@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node .",
-    "deploy": "node deploy"
+    "publish": "node deploy",
+    "deploy": "node deploy --push"
   },
   "publishDirs": [
     "md",
@@ -24,7 +25,8 @@
     "nodegit": "^0.27.0",
     "polka": "^0.5.2",
     "port-authority": "^1.1.2",
-    "sirv": "^1.0.14"
+    "sirv": "^1.0.14",
+    "stdio": "^2.1.1"
   },
   "devDependencies": {
     "mkdirp": "^1.0.4",
