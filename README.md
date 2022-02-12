@@ -100,3 +100,5 @@ Normally it takes a few minutes for your contents to become live.
 
 Check <https://pages.github.com/> and select **project** for more information.
 
+# Content styling
+`dev/index.css` has the style for your slides. You can edit this file to control the look.
