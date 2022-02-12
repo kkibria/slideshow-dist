@@ -23,6 +23,7 @@
     "livereload": "^0.9.3",
     "nodegit": "^0.27.0",
     "polka": "^0.5.2",
+    "port-authority": "^1.1.2",
     "sirv": "^1.0.14"
   },
   "devDependencies": {

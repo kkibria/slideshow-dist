@@ -82,7 +82,6 @@ matter you can set values to some predefined properties to control aspects of sl
 
 properties in front matter
 
-
 examples of different layout
 
 footnote
