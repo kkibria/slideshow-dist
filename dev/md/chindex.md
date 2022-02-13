@@ -64,18 +64,32 @@ Markdown has become quite popular lately and you can find plenty of sites provid
 ## But how do I make multiple slides in my slide show? Do I need to make one text file for each slide? That might be a lot of files!
 
 A single Markdown file can contain all your slides.
-We use a few simple and practical ways to break the content
+We use simple and practical ways to break the content
 into multiple slides.
 
 - Use Top level headings to create a new slide.
 - Use front matter to create a new slide.
 
 ## Navigating thru the slide show is simple
-You can use PageUp, PageDown,
-``↑`` [Up-Arrow],
-``↓`` [Down-Arrow], ``→`` [Right-Arrow]	or  
-``←`` [Left-Arrow] keys or simply mouse-wheel to navigate between the pages.
+You can use followings to navigate between the pages:  
+- `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go backward.  
+- `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys to go forward.  
+- `MouseWheel` to go in both directions.
 
+# Why and how do I get it?
+Like it what you have seen so far?
+
+## What are the benefits?
+* You can immediately start building your slides with a text file using any text
+editor you have.
+* You can build site like this easily and share it with people. Any update to your
+content will immediately be visible to everyone you shared it with thru the website.
+No need to physically send them slideshow files.
+
+## Installing
+You can install and start building your slideshow
+right now. Please visit our [github](https://github.com/kkibria/slideshow-dist) repository
+to get installation instructions. 
 # Front Matter
 In front of a slide or group of slides we can attach front matter. In the front
 matter you can set values to some predefined properties to control aspects of slide generation.

@@ -37,7 +37,7 @@ async function start(liveport, srvrport) {
     const bundle = await readFile(src + '.js');
     await writeFile(dst + '.js', inject(port) + '\n' + bundle);
     await copyFile(src + '.css', dst + '.css');
-    console.log(`> ${FgGreen}livereload${Reset} listening to ${FgCyan}localhost:${port}${Reset} ~!`);
+    console.log(`> ${FgGreen}livereload${Reset} listening to ${FgCyan}port ${port}${Reset}`);
 
     const assets = sirv('dev', {
         dev: true
@@ -48,7 +48,8 @@ async function start(liveport, srvrport) {
         .use(compression(), assets)
         .listen(polkport, err => {
             if (err) throw err;
-            console.log(`> ${FgGreen}Server${Reset} Ready on ${FgCyan}localhost:${polkport}${Reset} ~!`);
+            console.log(`> ${FgGreen}Server${Reset} ready at ${FgCyan}http://localhost:${polkport}${Reset}`);
+            console.log(`\n===== ${FgGreen}Use you browser to view${Reset} =====`);
         });
 }
 

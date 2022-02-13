@@ -25,7 +25,9 @@ it's style by using it's css file in this app.
 # How to install
 
 1. You need to have [nodejs](https://nodejs.org/en/) installed from the site before you can use this tool. 
-2. Copy the files from my repository to your computer using one of the following methods into a directory of your choice. Let's assume the directory is ``my_slides`` for example here but you can have any directory name you wish.
+2. Copy the files from my repository to your computer using one of the following methods into a
+directory of your choice. Let's assume the directory is ``my_slides`` for example here but
+you can have any directory name you wish.
 
 ## Using degit
 ```
@@ -55,7 +57,6 @@ To edit the slide go to ``public/md`` directory and
 edit the markdown file. This is the directory that will hold all the markdown files. As you
 save the updated markdown file, the browser will
 live refresh the updates in the slide view in your browser.
-
 # Publishing slideshow to the internet
 Go to ``my_slides`` directory. Now prepare the files,
 
