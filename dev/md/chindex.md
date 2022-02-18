@@ -7,7 +7,7 @@ aspectratio: 4x3
 
 <img class="s25" src="images/favicon.svg">
 
-Press Down-arrow to go to the next slide.
+Press `Down-arrow` to go to the next slide.
 
 ```$
 title: "Slide Show Demo"
@@ -25,7 +25,7 @@ According to [wikipedia](https://en.wikipedia.org/wiki/Slide_show), "A slide sho
 of a series of still images on a projection screen or electronic display device, typically in a
 prearranged sequence". 
 
-Press Down-arrow to go to the next slide.
+Press `Down-arrow` to go to the next slide.
 
 ```$
 title: "Slide Show Demo"
@@ -51,8 +51,12 @@ According to
 images on a projection screen or electronic display
 device, typically in a prearranged sequence". 
 
-Press Down-Arrow to go to the next slide.
+Press `Down-Arrow` to go to the next slide.
 ```
+
+**Feel free to cross check by going back to the previous slide by pressing `Up-Arrow`.**
+
+Of course you can also use `Down-Arrow` to go to the next slide.
 
 ```$
 title: "Slide Show Demo"
