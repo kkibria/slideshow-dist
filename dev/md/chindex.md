@@ -1,3 +1,18 @@
+```$
+title: "সমসাময়িক সঙ্গীত রচনা"
+layout: Title
+aspectratio: 4x3
+```
+# SlideShow - A simple presentation builder
+
+<img class="s25" src="images/favicon.svg">
+
+Press Down-arrow to go to the next slide.
+
+```$
+title: "Slide Show Demo"
+layout: SingleColumn
+```
 # SlideShow
 
 <img class="s25" src="images/Schulprojekt_Hilden-001.jpg">
@@ -15,7 +30,7 @@ Press Down-arrow to go to the next slide.
 ```$
 title: "Slide Show Demo"
 layout: SingleColumn
-nobreak: True
+nobreak: true
 ```
 # The Source file
 
