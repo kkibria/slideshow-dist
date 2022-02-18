@@ -48,6 +48,7 @@ h3 {
 .footnote {
     border-top-width: 1px;
     border-top-style: solid;
+    border-top: gray;
 }
 
 li p {
@@ -62,6 +63,11 @@ li p {
     font-size: 2em;
 }
 
+pre {
+    padding: 10px;
+    background-color: rgb(198, 226, 235);
+}
+
 a,
 a>code {
     color: rgb(249, 38, 114);
@@ -69,7 +75,6 @@ a>code {
 }
 
 code {
-    /* background: #e7e8e2; */
     border-radius: 5px;
 }
 
@@ -96,20 +101,6 @@ code {
     clear: both;
 }
 
-#slideshow .slide .content code {
-    font-size: 0.8em;
-}
-
-#slideshow .slide .content pre {
-    background: lightblue;
-}
-
-
-#slideshow .slide .content pre code {
-    font-size: 0.9em;
-    padding: 15px;
-}
-
 .inverse {
     background: #272822;
     color: #777872;
@@ -122,46 +113,22 @@ code {
     line-height: 0.8em;
 }
 
-/* Slide-specific styling */
-
-#slide-inverse .footnote {
-    bottom: 12px;
-    left: 20px;
+.inverse .footnote {
+    border-top: lightgray;
 }
 
-#slide-how .slides {
-    font-size: 0.9em;
-    position: absolute;
-    top: 151px;
-    right: 140px;
+.title pre {
+    margin-left: 25%;
+    width: 50%;
+    text-align: left;
 }
 
-#slide-how .slides h3 {
-    margin-top: 0.2em;
+.inverse pre {
+    background-color: rgb(99, 99, 99);
 }
 
-#slide-how .slides .first,
-#slide-how .slides .second {
-    padding: 1px 20px;
-    height: 90px;
-    width: 120px;
-    -moz-box-shadow: 0 0 10px #777;
-    -webkit-box-shadow: 0 0 10px #777;
-    box-shadow: 0 0 10px #777;
-}
-
-#slide-how .slides .first {
-    background: #fff;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    z-index: 1;
-}
-
-#slide-how .slides .second {
-    position: relative;
-    background: #fff;
-    z-index: 0;
+.inverse pre code {
+    color: black;
 }
 
 img {
@@ -180,38 +147,6 @@ blockquote {
     padding-left: 1em;
 }
 
-.title>.footnote {
-    border-top: lightgray;
-}
-
 .single-column {
     background-color: #eee;
-}
-
-.single-column>.footnote {
-    border-top: gray;
-}
-
-pre {
-    background-color: rgb(198, 226, 235);
-}
-
-/* Two-column layout */
-
-.left-column {
-    color: #777;
-    width: 35%;
-    height: 92%;
-    float: left;
-}
-
-.left-column h1:last-of-type,
-.left-column h2:last-child {
-    color: #000;
-}
-
-.right-column {
-    width: 60%;
-    float: right;
-    padding-top: 1em;
 }
