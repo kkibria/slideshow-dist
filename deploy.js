@@ -1,14 +1,14 @@
 'use strict';
 
-import { readFile, access, mkdir, stat, copyFile } from 'fs/promises';
+import { readFile, mkdir } from 'fs/promises';
 import { constants } from 'fs';
-import { default as ncp } from 'ncp';
 import { default as util } from 'util';
-import { default as mkdirp } from 'mkdirp';
 import { default as path } from 'path';
 import { default as NodeGit } from 'nodegit';
 import { execFile } from 'child_process';
 import { getopt } from 'stdio';
+import { default as copyfiles } from 'copyfiles';
+
 
 const Reset = "\x1b[0m";
 const FgGreen = "\x1b[32m";
@@ -18,55 +18,27 @@ const Dim = "\x1b[2m";
 const Normal = "\x1b[22m";
 
 const dist_pfx = "dist/";
-const src_pfx = "dev/";
 const dst_pfx = "public/";
 const branch = "gh-pages";
 
-ncp.limit = 16;
-
-async function copy(src, dst) {
-    await access(src, constants.F_OK);
-    const st = await stat(src);
-    console.info(`==> Copying "${src}" to "${dst}"...`);
-    if (st.isDirectory()) {
-        await mkdirp(dst);
-        let f = util.promisify(ncp);
-        await f(src, dst);
-    } else {
-        await copyFile(src, dst);
-    }
-}
-
-async function do_n2p(spec) {
+async function copy_dirs(spec) {
     let i;
     let pr_list = [];
+    let f = util.promisify(copyfiles);
     for (i in spec) {
-        let src_path = src_pfx + spec[i];
-        let dst_path = dst_pfx + spec[i];
-        const pr = copy(src_path, dst_path);
+        let paths, opt;
+        [paths, opt] = spec[i];
+        const pr = f(paths, opt);
         pr_list.push(pr);
     }
     await Promise.all(pr_list);
-}
-
-async function copy_bundle() {
-    const bld_pfx = dst_pfx + "build/"
-    const bld = path.resolve(bld_pfx);
-    await mkdir(bld, { recursive: true });
-    let fn = "bundle.js";
-    await copyFile(dist_pfx + fn, bld_pfx + fn);
-    fn = "bundle.css";
-    await copyFile(dist_pfx + fn, bld_pfx + fn);
 }
 
 async function publish() {
     let s = await readFile('package.json');
     let pkg = JSON.parse(s);
     let copy_spec = pkg.publishDirs;
-    let docs = path.resolve(dst_pfx);
-    await mkdir(docs, { recursive: true });
-    await do_n2p(copy_spec);
-    await copy_bundle();
+    await copy_dirs(copy_spec);
 }
 
 async function commit(msg) {
@@ -123,7 +95,7 @@ try {
     const ops = getopt({
         'push': { key: 'p', description: 'push to remote git' },
     });
-    console.log(ops);
+    console.log("options: ", ops);
     deploy(ops.push);
 } catch (e) {
     console.error("error.");

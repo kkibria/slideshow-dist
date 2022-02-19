@@ -5,31 +5,30 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node .",
+    "start": "node . -m md",
     "publish": "node deploy",
     "deploy": "node deploy --push"
   },
   "publishDirs": [
-    "md",
-    "images",
-    "favicon.png",
-    "index.css",
-    "index.html"
+    [["dist/*", "public/build"], {"up": 1}],
+    [["md/*", "public"], {}],
+    [["md/images/*", "public/images"], { "up": 2 }],
+    [["md/assets/*", "public/assets"], { "up": 2 }],
+    [["dev/*", "public"], { "up": 1 }]
   ],
   "author": "Khan Kibria",
   "license": "Use for slide presentation allowed",
   "homepage": "https://kkibria.github.io/slideshow-dist/",
   "dependencies": {
     "compression": "^1.7.4",
+    "copyfiles": "^2.4.1",
     "livereload": "^0.9.3",
     "nodegit": "^0.27.0",
     "polka": "^0.5.2",
     "port-authority": "^1.1.2",
-    "sirv": "^1.0.14",
-    "stdio": "^2.1.1"
+    "sirv": "^1.0.14"
   },
   "devDependencies": {
-    "mkdirp": "^1.0.4",
-    "ncp": "^2.0.0"
+    "stdio": "^2.1.1"
   }
 }
