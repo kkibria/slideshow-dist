@@ -80,7 +80,7 @@ async function push() {
 }
 
 async function deploy(bCommit) {
-    console.log(FgCyan + '\n:: Deploying from "public" to "docs"' + Reset);
+    console.log(FgCyan + '\n:: Deploying from "public" to "gh-pages"' + Reset);
     let start = new Date();
     await publish();
     if (bCommit) {
