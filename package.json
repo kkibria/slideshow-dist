@@ -11,49 +11,11 @@
     "deploy": "node deploy --push"
   },
   "publishDirs": [
-    [
-      [
-        "dist/*",
-        "public/build"
-      ],
-      {
-        "up": 1
-      }
-    ],
-    [
-      [
-        "md/*",
-        "public"
-      ],
-      {}
-    ],
-    [
-      [
-        "md/images/*",
-        "public/images"
-      ],
-      {
-        "up": 2
-      }
-    ],
-    [
-      [
-        "md/assets/*",
-        "public/assets"
-      ],
-      {
-        "up": 2
-      }
-    ],
-    [
-      [
-        "dev/*",
-        "public"
-      ],
-      {
-        "up": 1
-      }
-    ]
+    [["dist/*","public/build"],{"up": 1}],
+    [["md/*","public"],{}],
+    [["md/images/*","public/images"],{"up": 2}],
+    [["md/assets/*","public/assets"],{"up": 2}],
+    [["dev/*","public"],{"up": 1}]
   ],
   "author": "Khan Kibria",
   "license": "Use for slide presentation allowed",
