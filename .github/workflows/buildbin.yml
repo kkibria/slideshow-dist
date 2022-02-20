@@ -18,7 +18,7 @@ jobs:
           npm uninstall node-pre-gyp --save
           npm install @mapbox/node-pre-gyp --save
           npm i pkg
-          npx pkg -v ${{ github.ref }} .
+          npx pkg .
 
       - uses: papeloto/action-zip@v1
         with:
@@ -43,7 +43,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./ss-bin.zip
-          asset_name: slideshow-bin.zip
+          asset_name: slideshow-bin.${{ secrets.GITHUB_TOKEN }}.zip
           asset_content_type: application/zip
 
 
