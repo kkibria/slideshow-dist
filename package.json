@@ -78,9 +78,6 @@
       "dist/*",
       "dev/*"
     ],
-    "targets": [
-      "node14-win-x64"
-    ],
     "outputPath": "ss-bin"
   }
 }
