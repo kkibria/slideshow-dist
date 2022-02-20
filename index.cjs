@@ -1,15 +1,16 @@
 'use strict';
 
-require('sirv');
-require('polka');
-require('compression');
-const createServer = require('livereload').createServer;
-const find = require('port-authority').find;
-const readFile = require('fs/promises').readFile;
-const writeFile = require('fs/promises').writeFile;
-const copyFile = require('fs/promises').copyFile;
-const mkdir = require('fs/promises').mkdir;
-const getopt = require('stdio').getopt;
+const sirv = require('sirv');
+const polka = require('polka');
+const compress = require('compression')();
+const { createServer } = require('livereload');
+const { find } = require('port-authority');
+const { readFile, access, stat } = require('fs/promises');
+const { Readable } = require("stream")
+const { getopt } = require('stdio');
+const open = require('open');
+const path = require('path');
+const { constants } = require('fs');
 
 const Reset = "\x1b[0m";
 const FgGreen = "\x1b[32m";
@@ -23,48 +24,79 @@ function inject(port) {
     return `(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = ${snippetSrc}; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);`
 }
 
-async function start(liveport, srvrport, mdpath) {
+async function serve(liveport, srvrport, mdpath, ch) {
     const port = await find(liveport);
     var server = createServer({
         port: port,
         extraExts: ['md']
     });
-    server.watch(__dirname + "/" + mdpath);
-
-    // now instrument the code
-    await mkdir("dev/build", { recursive: true });
-    const src = "dist/bundle";
-    const dst = "dev/build/bundle";
-    const bundle = await readFile(src + '.js');
-    await writeFile(dst + '.js', inject(port) + '\n' + bundle);
-    await copyFile(src + '.css', dst + '.css');
+    server.watch(mdpath);
     console.log(`> ${FgGreen}livereload${Reset} listening to ${FgCyan}port ${port}${Reset}`);
 
-    const assets = sirv('dev');
+    const d = await readFile(__dirname + "/dist/bundle.js");
+    const bundle_data = inject(port) + '\n' + d;
+    function injectlive(req, res, next) {
+        if (req.path == '/bundle.js' && req.method == 'GET') {
+            const rs = Readable.from([bundle_data]);
+            rs.pipe(res);
+        } else {
+            next();
+        }
+    }
+
+    const assets = sirv(__dirname + "/" + 'dev');
+    const dist = sirv(__dirname + "/" + 'dist');
     const md = sirv(mdpath, { dev: true });
     const img = sirv(mdpath + "/images", { dev: true });
     const polkport = await find(srvrport);
     polka()
-        .use(compression(), assets)
-        .use('/md', compression(), md)
-        .use('/images', compression(), img)
+        .use(compress, assets)
+        .use('/build', compress, injectlive, dist)
+        .use('/md', compress, md)
+        .use('/images', compress, img)
         .listen(polkport, err => {
             if (err) throw err;
-            console.log(`> ${FgGreen}Server${Reset} ready at ${FgCyan}http://localhost:${polkport}${Reset}`);
-            console.log(`\n===== ${FgGreen}Use you browser to view${Reset} =====`);
+            let url = `http://localhost:${polkport}`;
+            console.log(`> ${FgGreen}Server${Reset} ready at ${FgCyan}${url}${Reset}`);
+            console.log(`\n===== ${FgGreen}Opening your browser to view${Reset} =====`);
+            console.log(`\nWatching ${FgCyan}${mdpath}${Reset} folder`);
+            open(`${url}/?ch=${ch}`);
         });
+}
+
+async function start(mdpath) {
+    try {
+        await access(mdpath, constants.R_OK);
+    } catch (e) {
+        console.error(`can not access ${mdpath}`);
+        return;
+    }
+    const stats = await stat(mdpath);
+    let mddir = mdpath;
+    let ch = "index";
+    if (stats.isFile()) {
+        const { name, ext } = path.parse(mdpath);
+        mddir = path.dirname(mdpath);
+        if (ext == ".md" && name.substring(0,2) == 'ch') {
+            ch = name.substring(2);
+        } else {
+            console.error(`${FgCyan}${mdpath}${Reset} is not a slideshow file!`);
+            return;
+        }
+    }
+    await serve(35729, 5000, mddir, ch);
 }
 
 try {
     const ops = getopt({
-        'mddir': {
+        'mdpath': {
             key: 'm',
-            description: 'directory of the markdown files',
+            description: 'directory/path to markdown slideshow file/s',
             required: true,
             args: 1
         },
     });
-    start(35729, 5000, ops.mddir);
+    start(ops.mdpath);
 } catch (e) {
-    console.error("error.");
+    console.error(`error: ${e}`);
 }

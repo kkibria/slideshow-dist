@@ -1,5 +1,5 @@
 ```$
-title: "সমসাময়িক সঙ্গীত রচনা"
+title: "Slide Show Demo"
 layout: Title
 aspectratio: 4x3
 ```

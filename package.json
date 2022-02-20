@@ -61,13 +61,26 @@
   "dependencies": {
     "compression": "^1.7.4",
     "copyfiles": "^2.4.1",
+    "directory-tree": "^3.2.1",
     "livereload": "^0.9.3",
     "nodegit": "^0.27.0",
+    "open": "^8.4.0",
+    "pkg": "^5.5.2",
     "polka": "^0.5.2",
     "port-authority": "^1.1.2",
     "sirv": "^1.0.14"
   },
   "devDependencies": {
     "stdio": "^2.1.1"
+  },
+  "pkg": {
+    "assets": [
+      "dist/*",
+      "dev/*"
+    ],
+    "targets": [
+      "node14-win-x64"
+    ],
+    "outputPath": "ss-bin"
   }
 }
