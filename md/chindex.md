@@ -100,9 +100,8 @@ You can use followings to navigate between the pages:
 Like it what you have seen so far?
 
 ## A picture is worth thousand words
-Take a look at `chindex.md` file, the Markdown source for this presentation,
-* [Text view](md/chindex.md).
-* [Plain Markdown view](https://github.com/kkibria/slideshow-dist/blob/gh-pages/md/chindex.md).
+Take a look at [`chindex.md`](md/chindex.md) file, the actual full Markdown source
+that created this presentation,
 
 ## What are the benefits?
 * Build your slides with a text file using any text editor you have.
