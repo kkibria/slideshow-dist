@@ -1,8 +1,10 @@
+<img src="md/images/favicon.svg">
+
 # What is Slideshow?
 
 **Slideshow** is markdown based tool to build presentations that can viewed with a modern web browser.
-Markdown is just a text file with easy to understand formatting capabilities
-As Markdown is widely used because of its simplicity, authoring presentation becomes quick and simple.
+Markdown is just a text file with easy to understand formatting capabilities.
+Markdown is widely used because of its simplicity. Authoring presentations with markdown becomes quick and simple.
 If you are new to Markdown, check this [tutorial](https://commonmark.org/help/tutorial/) to get upto
 speed on Markdown formatting capabilities.
 
@@ -11,17 +13,28 @@ information.
 
 ## Why and how was this tool built?
 
-In the past I have used a Markdown based tool called [remark](https://github.com/gnab/remark).
+In the past I have used a very nice Markdown based tool called [remark](https://github.com/gnab/remark).
 for my own use and liked Markdown's simplicity. Around mid 2019, I got interested in
-[Svelte](https://svelte.dev/) and switched to for developing web applications since then.
-So recently I decided develop a slideshow that meets my following needs better using svelte and this is
-the first stab at it.
-- I did not like using a nonstandard extended Markdown format as remark does. I wanted to keep most of it Markdown compliant.
+[Svelte](https://svelte.dev/), and switched to it for developing web applications since then.
+
+Recently I decided to develop a slideshow tool that focuses on the followings,
+- For fun I wanted to use svelte to see how it helps in doing a project like this.
+- I did not want to use a nonstandard extended Markdown format as remark does. I wanted to keep most of it Markdown compliant.
 - I wanted to do pagination based on top level heading, so that restructuring of heading level (which I do often) does not require manual pagination as remark does.
 - I wanted to do some other automated way of structuring slide contents moving forward.
+- Add animation capabilities like desktop presentation tools does.
+- Want to make it simple for people who are not html savvy or know much of web technology.
+- Styling support for non CSS savvy people.
+- Add REPL/playground capability.
 
 Don't get me wrong, I did like remark. I liked it that much that I actually have retained
-it's style by using it's css file in this app. 
+the look from remark so far.
+
+# Getting started
+
+
+
+
 # How to install
 
 1. You need to have [nodejs](https://nodejs.org/en/) installed from the site before you can use this tool. 
