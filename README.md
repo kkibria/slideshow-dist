@@ -11,31 +11,12 @@ speed on Markdown formatting capabilities.
 Check the online [documentation and demo](https://kkibria.github.io/slideshow-dist/) site for more
 information.
 
-## Why and how was this tool built?
-
-In the past I have used a very nice Markdown based tool called [remark](https://github.com/gnab/remark).
-for my own use and liked Markdown's simplicity. Around mid 2019, I got interested in
-[Svelte](https://svelte.dev/), and switched to it for developing web applications since then.
-
-Recently I decided to develop a slideshow tool that focuses on the followings,
-- For fun I wanted to use svelte to see how it helps in doing a project like this.
-- I did not want to use a nonstandard extended Markdown format as remark does. I wanted to keep most of it Markdown compliant.
-- I wanted to do pagination based on top level heading, so that restructuring of heading level (which I do often) does not require manual pagination as remark does.
-- I wanted to do some other automated way of structuring slide contents moving forward.
-- Add animation capabilities like desktop presentation tools does.
-- Want to make it simple for people who are not html savvy or know much of web technology.
-- Styling support for non CSS savvy people.
-- Add REPL/playground capability.
-
-Don't get me wrong, I did like remark. I liked it that much that I actually have retained
-the look from remark so far.
-
 # Getting started
 
-> TODO: We will be generating binary executable
-> to make slideshow content authoring experience smooth for non technical people. The current way
+> TODO: We will be generating CLI executable
+> to make slideshow content authoring experience smooth for non-coder people. The current way
 > is really targeted people who has knowledge of npm and node, which might be hard for people who
-> just wants to use it. 
+> just wants to use it.
 
 # Install for npm 
 
@@ -122,3 +103,24 @@ Check <https://pages.github.com/> and select **project** for more information.
 
 # Content styling
 `dev/index.css` has the style for your slides. You can edit this file to control the look.
+
+## Why and how was this tool built?
+
+In the past I have used a very nice Markdown based tool called [remark](https://github.com/gnab/remark),
+for my own use and liked Markdown's simplicity. Around mid 2019, I got interested in
+[Svelte](https://svelte.dev/), and switched to svelte for developing web applications because
+I liked it.
+
+Subsequently, I decided to develop a slideshow tool that focuses on the followings,
+- Use svelte to see how it helps in doing a project like this.
+- Do not use any nonstandard Markdown format. Keep it Markdown compliant unless I need some thing absolutely necessary.
+- Pagination based on top level heading, so that restructuring of heading levels (which I do often) does not require manual pagination.
+- Provide layouts that slide contents in a variety of creative ways that we see in
+modern websites via plug-ins.
+- Add animation capabilities like desktop presentation tools does.
+- Make it simple for people who are not html savvy or know much of web technology.
+- Styling support for non CSS savvy people.
+- Add REPL/playground capability.
+
+I did like remark. I liked it that much that I still retained
+the look from remark so far.
