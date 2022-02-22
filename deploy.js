@@ -11,7 +11,7 @@ program
     .action(async (ops) => {
         try {
             await publish('md', ".");
-            if (bCommit) {
+            if (ops.push) {
                 await ghpages("publish public folder");
             }
         } catch (e) {
