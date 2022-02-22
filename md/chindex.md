@@ -95,6 +95,7 @@ You can use followings to navigate between the pages:
 - `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys to go forward.  
 - `MouseWheel` to go in both directions.
 
+
 # Why and how do I get it?
 Like it what you have seen so far?
 
@@ -104,6 +105,9 @@ editor you have.
 * You can build site like this easily and share it with people. Any update to your
 content will immediately be visible to everyone you shared it with thru the website.
 No need to physically send them slideshow files.
+
+## Markdown source for this slideshow
+A picture is worth thousand words. View the entire source, `chindex.md`, for this presentation on github,  [markdown view](https://github.com/kkibria/slideshow-dist/blob/main/md/chindex.md). [text view](https://raw.githubusercontent.com/kkibria/slideshow-dist/main/md/chindex.md)
 
 ## Installing
 You can install and start building your slideshow
