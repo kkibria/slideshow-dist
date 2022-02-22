@@ -13,7 +13,7 @@ program
 
 program.command('open')
     .description('Starts slideshow server to open presentation')
-    .argument('<mdpath>', 'directory/path to markdown slideshow file/s')
+    .argument('[mdpath]', 'directory/path to markdown slideshow file/s')
     .action(async (mdpath) => {
         try {
             await slideshow(mdpath);
@@ -24,7 +24,7 @@ program.command('open')
 
 program.command('publish')
     .description('Package all the files in a directory named "public" for website')
-    .argument('<mdpath>', 'directory/path to markdown slideshow file/s')
+    .argument('[mdpath]', 'directory/path to markdown slideshow file/s')
     .option('--out <string>', 'directory where "public" will be placed')
     .action(async (mdpath, options) => {
         try {
