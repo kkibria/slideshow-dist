@@ -98,25 +98,26 @@ You can use followings to navigate between the pages:
 - `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys to go forward.  
 - `MouseWheel` to go in both directions.
 
-
 # How do I get it? 
 Like it what you have seen so far?
 
 ## A picture is worth thousand words
-Take a look at [`chindex.md`](md/chindex.md) file, the actual full Markdown source
+Take a look at the [`chindex.md`](md/chindex.md) file, actual full Markdown source
 that created this presentation,
 
 ## What are the benefits?
+
 * Build your slides with a text file using any text editor you have.
 * The slide text are rendered with correct font size to prevent contents from clipped.
-This is quite nice at times when you have to put a bit more text than a slide can fit! 
-* Build a website to share up-to-date presentations quickly. They don't need a viewer,
-everyone has a browser! 
+This is quite nice at times when you have to put a bit more text than a slide can fit!
+* Build a website to share all your up-to-date presentations quickly.
+Everyone has a browser, right?!
 
 ## Getting started
 You can start building your slideshow
 right now. Visit our [github](https://github.com/kkibria/slideshow-dist) repository
 to get installation instructions. 
+
 # Front Matter
 In front of a slide or group of slides we can attach front matter. In the front
 matter you can set values to some predefined properties to control aspects of slide generation.
