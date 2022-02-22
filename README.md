@@ -104,7 +104,7 @@ Check <https://pages.github.com/> and select **project** for more information.
 # Content styling
 `dev/index.css` has the style for your slides. You can edit this file to control the look.
 
-## Why and how was this tool built?
+# Why and how was this tool built?
 
 In the past I have used a very nice Markdown based tool called [remark](https://github.com/gnab/remark),
 for my own use and liked Markdown's simplicity. Around mid 2019, I got interested in
@@ -122,5 +122,4 @@ modern websites via plug-ins.
 - Styling support for non CSS savvy people.
 - Add REPL/playground capability.
 
-I did like remark. I liked it that much that I still retained
-the look from remark so far.
+The future road-map will follow these without a predetermined order.
