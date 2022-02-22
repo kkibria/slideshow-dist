@@ -18,7 +18,7 @@ program.command('open')
         try {
             await slideshow(mdpath);
         } catch (e) {
-            console.error(`error: ${e}`);
+            console.error(`${e}`);
         }
     });
 
@@ -28,9 +28,9 @@ program.command('publish')
     .option('--out <string>', 'directory where "public" will be placed')
     .action(async (mdpath, options) => {
         try {
-            await publish(mdpath, options.out, false);
+            await publish(mdpath, options.out);
         } catch (e) {
-            console.error(`error: ${e}`);
+            console.error(`${e}`);
         }
     });
 

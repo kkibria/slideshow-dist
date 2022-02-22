@@ -1,6 +1,7 @@
 'use strict';
 
 const publish = require('./lib/publish');
+const ghpages = require('./lib/ghpages');
 const { Command } = require('commander');
 const program = new Command();
 
@@ -9,7 +10,10 @@ program
     .option('-p, --push', 'push to remote git', false)
     .action(async (ops) => {
         try {
-            await publish('md', ".", ops.push);
+            await publish('md', ".");
+            if (bCommit) {
+                await ghpages("publish public folder");
+            }
         } catch (e) {
             console.error(`error: ${e}`);
         }
