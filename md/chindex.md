@@ -99,6 +99,12 @@ You can use followings to navigate between the pages:
 # Why and how do I get it?
 Like it what you have seen so far?
 
+## A picture is worth thousand words
+Markdown source for this 
+View the entire source file, `chindex.md`, for this slideshow presentation on github,
+* [markdown view](https://github.com/kkibria/slideshow-dist/blob/gh-pages/md/chindex.md).
+* [text view](https://raw.githubusercontent.com/kkibria/slideshow-dist/gh-pages/md/chindex.md).
+
 ## What are the benefits?
 * You can immediately start building your slides with a text file using any text
 editor you have.
@@ -106,10 +112,8 @@ editor you have.
 content will immediately be visible to everyone you shared it with thru the website.
 No need to physically send them slideshow files.
 
-## Markdown source for this slideshow
-A picture is worth thousand words. View the entire source, `chindex.md`, for this presentation on github,  [markdown view](https://github.com/kkibria/slideshow-dist/blob/main/md/chindex.md). [text view](https://raw.githubusercontent.com/kkibria/slideshow-dist/main/md/chindex.md)
 
-## Installing
+## Getting started
 You can install and start building your slideshow
 right now. Please visit our [github](https://github.com/kkibria/slideshow-dist) repository
 to get installation instructions. 
@@ -117,8 +121,8 @@ to get installation instructions.
 In front of a slide or group of slides we can attach front matter. In the front
 matter you can set values to some predefined properties to control aspects of slide generation.
 
-properties in front matter
+TODO: properties in front matter
 
-examples of different layout
+TODO: examples of different layout
 
-footnote
+TODO: footnote

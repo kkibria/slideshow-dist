@@ -32,10 +32,12 @@ the look from remark so far.
 
 # Getting started
 
+> TODO: We will be generating binary executable
+> to make slideshow content authoring experience smooth for non technical people. The current way
+> is really targeted people who has knowledge of npm and node, which might be hard for people who
+> just wants to use it. 
 
-
-
-# How to install
+# Install for npm 
 
 1. You need to have [nodejs](https://nodejs.org/en/) installed from the site before you can use this tool. 
 2. Copy the files from my repository to your computer using one of the following methods into a
@@ -48,7 +50,7 @@ npx degit https://github.com/kkibria/slideshow-dist#main my_slides
 ```
 
 ## Using zip file
-[Download zip using this link](https://github.com/kkibria/slideshow-dist/archive/main.zip)  and expand in ``my_slides`` directory.
+[Download zip using this link](https://github.com/kkibria/slideshow-dist/archive/main.zip) and expand in ``my_slides`` directory.
 
 # Setup the directory
 After download,
@@ -65,10 +67,12 @@ Go to ``my_slides`` directory. Now start the application,
 npm start
 ```
 
-Now open your browser and goto <http://localhost:5000/> which will show you a slide.
-To edit the slide go to ``public/md`` directory and
-edit the markdown file. This is the directory that will hold all the markdown files. As you
-save the updated markdown file, the browser will
+This will open your default browser and load <http://localhost:5000/>  which will show you a slide.
+If your browser did not open automatically, you can manually open your browser and goto
+<http://localhost:5000/>.
+To edit the slide go to ``md`` directory and
+edit `chindex.md`, the markdown file. `md` is the directory that will hold all the markdown files.
+As you save the updated markdown file, the browser will
 live refresh the updates in the slide view in your browser.
 # Publishing slideshow to the internet
 Go to ``my_slides`` directory. Now prepare the files,
@@ -86,13 +90,14 @@ version management and github will also host your web server. `Slideshow` has th
 helper scripts to automate publishing to your github web server.
 
 ## Create your repo in github
-Just go to <https://github.com/kkibria/slideshow-dist/generate> and fill out the name you
-want. Then clone the repo to your computer.
+If you have an account in github, just go to <https://github.com/kkibria/slideshow-dist>
+and fork the project. Then clone the forked repo to your computer.
+
 ```
-git clone https://github.com/YOUR_USER_NAME/YOUR_REPO_NAME.git
+git clone https://github.com/YOUR_USER_NAME/slideshow-dist.git
 ```
 Now you can follow [Setup the directory](#setup-the-directory) section all the way to
-[publishing](t#publishing-slideshow-to-the-internet).  
+[publishing](#publishing-slideshow-to-the-internet).  
 
 ## Deploy to github pages hosted site  
 github hosted web server is called `github pages`. To deploy,
@@ -103,10 +108,11 @@ npm run deploy
 Which will push your content to the site. Now you have to tell the server where your
 content is in your repo.
 
-Note the deploying will only push to the web site, any editing you do to your content
-must be separately committed and pushed to github  (`main` branch) for version control. 
+> Deploying will only push content to the web site. Any editing you do to your content
+> **must** be separately committed and pushed to github  (`main` branch) for version control.
+
 ## Setup web server
-Go to your repo settings, scroll down to github pages section
+Go to your github repo settings, scroll down to github pages section
 and just edit `source` setting to select `gh-pages` branch and set folder to `/root` for
 your site and press `save` to save the setting. You will see the URL to access
 your site right above the `source` setting, save the URL to share to your viewers.
