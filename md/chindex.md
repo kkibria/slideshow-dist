@@ -77,10 +77,13 @@ are just a few of the things we can do with Markdown.
 
 ### Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like ``#`` or ``*``.
 
-Markdown has become quite popular lately and you can find plenty of sites providing tutorial in the internet. You can try this [site](https://www.markdownguide.org/basic-syntax/) to learn Markdown.
+Markdown has become quite popular lately and you can find plenty of sites providing tutorial in the
+internet. You can try this [site](https://www.markdownguide.org/basic-syntax/) to learn Markdown.
 
 # Slides and Navigation
-## But how do I make multiple slides in my slide show? Do I need to make one text file for each slide? That might be a lot of files!
+## How do I make multiple slides?  
+
+Do I need to make one text file for each slide? That might be a lot of files!
 
 A single Markdown file can contain all your slides.
 We use simple and practical ways to break the content
@@ -96,7 +99,7 @@ You can use followings to navigate between the pages:
 - `MouseWheel` to go in both directions.
 
 
-# Why and how do I get it?
+# How do I get it? 
 Like it what you have seen so far?
 
 ## A picture is worth thousand words
