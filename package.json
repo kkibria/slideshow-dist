@@ -1,30 +1,25 @@
 {
-  "name": "slideshow-dist",
+  "name": "slideshow",
   "version": "1.0.0",
   "description": "Slideshow distribution",
   "main": "index.js",
-  "bin": "index.cjs",
-  "type": "module",
+  "bin": "index.js",
   "scripts": {
-    "start": "node . -m md",
+    "start": "node . open md",
     "publish": "node deploy",
-    "deploy": "node deploy --push"
+    "deploy": "node deploy --push",
+    "pkg": "npm exec pkg ."
   },
-  "publishDirs": [
-    [["dist/*","public/build"],{"up": 1}],
-    [["md/*","public"],{}],
-    [["md/images/*","public/images"],{"up": 2}],
-    [["md/assets/*","public/assets"],{"up": 2}],
-    [["dev/*","public"],{"up": 1}]
-  ],
   "author": "Khan Kibria",
   "license": "Use for slide presentation allowed",
   "homepage": "https://kkibria.github.io/slideshow-dist/",
   "dependencies": {
+    "commander": "^9.0.0",
     "compression": "^1.7.4",
     "copyfiles": "^2.4.1",
-    "directory-tree": "^3.2.1",
+    "glob": "^7.2.0",
     "livereload": "^0.9.3",
+    "mkdirp": "^1.0.4",
     "nodegit": "^0.27.0",
     "open": "^8.4.0",
     "pkg": "^5.5.2",
@@ -32,15 +27,16 @@
     "port-authority": "^1.1.2",
     "sirv": "^1.0.14"
   },
-  "devDependencies": {
-    "stdio": "^2.1.1"
-  },
   "pkg": {
     "assets": [
       "dist/*",
       "dev/*"
     ],
-    "targets": ["node14-linux-x64", "node14-macos-x64", "node14-win-x64"],
+    "targets": [
+      "node14-linux-x64",
+      "node14-macos-x64",
+      "node14-win-x64"
+    ],
     "outputPath": "ss-bin"
   }
 }
