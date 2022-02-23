@@ -102,7 +102,7 @@ You can use followings to navigate between the pages:
 Like it what you have seen so far?
 
 ## A picture is worth thousand words
-Take a look at the [`chindex.md`](md/chindex.md) file, actual full Markdown source
+Take a look at the [`chindex.md`](md/chindex.md) file, the actual full Markdown source
 that created this presentation,
 
 ## What are the benefits?
