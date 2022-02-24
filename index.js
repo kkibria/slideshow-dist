@@ -36,7 +36,7 @@ program.command('publish')
     });
 
     program.command('manual')
-    .description('Open presentation user manual')
+    .description('Open user manual')
     .action(async () => {
         try {
             await open(`${pkgjson.usermanual}`);
