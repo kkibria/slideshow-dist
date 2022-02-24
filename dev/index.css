@@ -150,3 +150,11 @@ blockquote {
 .single-column {
     background-color: #eee;
 }
+
+.book-link {
+    font-size: 65%;
+}
+
+.page-active {
+    color: rgb(36, 36, 36);
+}
