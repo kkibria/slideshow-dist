@@ -13,6 +13,7 @@
   "author": "Khan Kibria",
   "license": "Use for slide presentation allowed",
   "homepage": "https://kkibria.github.io/slideshow-dist/",
+  "usermanual": "https://kkibria.github.io/slideshow-dist/?ch=userman",
   "dependencies": {
     "commander": "^9.0.0",
     "compression": "^1.7.4",

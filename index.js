@@ -5,6 +5,7 @@ const slideshow = require('./lib/slideshow');
 const pkgjson = require('./package.json');
 const { Command } = require('commander');
 const program = new Command();
+const open = require('open');
 
 program
     .name('slideshow')
@@ -29,6 +30,16 @@ program.command('publish')
     .action(async (mdpath, options) => {
         try {
             await publish(mdpath, options.out);
+        } catch (e) {
+            console.error(`${e}`);
+        }
+    });
+
+    program.command('manual')
+    .description('Open presentation user manual')
+    .action(async () => {
+        try {
+            await open(`${pkgjson.usermanual}`);
         } catch (e) {
             console.error(`${e}`);
         }
