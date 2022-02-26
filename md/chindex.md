@@ -80,38 +80,74 @@ are just a few of the things we can do with Markdown.
 Markdown has become quite popular lately and you can find plenty of sites providing tutorial in the
 internet. You can try this [site](https://www.markdownguide.org/basic-syntax/) to learn Markdown.
 
+```$
+title: "Slide Show Demo"
+layout: TwoColumn
+```
 # Slides and Navigation
 ## How do I make multiple slides?  
 
 Do I need to make one text file for each slide? That might be a lot of files!
+
+Worry no more.
 
 A single Markdown file can contain all your slides.
 We use simple and practical ways to break the content
 into multiple slides.
 
 - Use Top level headings to create a new slide.
-- Use front matter to create a new slide.
+- Use front matter to create a new group of slides in a particular layout.
 
+> Did you notice that we have switched just now the layout to a two column mode?
+> It was done with *front matter*. 
 ## Navigating thru the slide show is simple
 You can use followings to navigate between the pages:  
 - `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go backward.  
 - `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys to go forward.  
 - `MouseWheel` to go in both directions.
 
-# How do I get it? 
-Like it what you have seen so far?
+```$
+title: "Slide Show Demo"
+layout: TwoColumn
+autolist: True
+```
+# What are the benefits?
+
+## Simple and quick
+Build your slides with a text file using any text editor you have.
+
+Single column? Two column? No problem.
+
+> Did you notice how we are using a progressive subheading layout in this slide?
+> Heading to the left, content to the right. It's all automated.
+
+## Adaptive
+The slides are rendered with correct font size automatically to prevent contents from being clipped.
+
+This is quite nice at times when you have to put a bit more text than a slide can fit!
+
+## Easy to Collaborate
+Build a website to share all your up-to-date presentations quickly.
+
+Everyone has a browser, right?!
 
 ## A picture is worth thousand words
-Take a look at the [`chindex.md`](md/chindex.md) file, the actual full Markdown source
-that created this presentation,
 
-## What are the benefits?
+You probably are wondering at this point how was this slideshow made? What does the text file look like?
 
-* Build your slides with a text file using any text editor you have.
-* The slide text are rendered with correct font size to prevent contents from clipped.
-This is quite nice at times when you have to put a bit more text than a slide can fit!
-* Build a website to share all your up-to-date presentations quickly.
-Everyone has a browser, right?!
+Take a look at the [`chindex.md`](md/chindex.md) file.
+
+This is the actual full Markdown source that created this presentation,
+
+```$
+title: "Slide Show Demo"
+layout: SingleColumn
+```
+# How do I get it? 
+
+Like it what you have seen so far?
+
+Want to give it a try?
 
 ## Getting started
 You can start building your slideshow
