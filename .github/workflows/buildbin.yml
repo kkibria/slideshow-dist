@@ -20,20 +20,15 @@ jobs:
           npm i pkg
           npm run pkg
 
-      - uses: papeloto/action-zip@v1
-        with:
-          files: ss-bin/slideshow-linux
-          dest: slideshow-linux.zip
+      - name: Set path for candle and light
+        env:
+          WIX_PATH: ${{ env.wix }}
+        run: echo "$env:WIX_PATH\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
 
       - uses: papeloto/action-zip@v1
         with:
-          files: ss-bin/slideshow-macos
-          dest: slideshow-macos.zip
-
-      - uses: papeloto/action-zip@v1
-        with:
-          files: ss-bin/slideshow-win.exe
-          dest: slideshow-win.zip
+          files: ss-bin/*
+          dest: slideshow-binaries-all.zip
 
       - name: Create Release
         id: create_release
@@ -46,15 +41,25 @@ jobs:
           draft: true
           prerelease: true
 
+      - name: Upload all binaries
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: slideshow-binaries-all.zip
+          asset_name: slideshow-binaries-all.zip
+          asset_content_type: application/zip
+
       - name: Upload linux Asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: slideshow-linux.zip
-          asset_name: slideshow-linux.zip
-          asset_content_type: application/zip
+          asset_path: ss-bin/slideshow-linux
+          asset_name: slideshow-linux
+          asset_content_type: application/octet-stream
 
       - name: Upload macos Asset
         uses: actions/upload-release-asset@v1
@@ -62,9 +67,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: slideshow-macos.zip
-          asset_name: slideshow-macos.zip
-          asset_content_type: application/zip
+          asset_path: ss-bin/slideshow-macos
+          asset_name: slideshow-macos
+          asset_content_type: application/octet-stream
 
       - name: Upload windows Asset
         uses: actions/upload-release-asset@v1
