@@ -13,6 +13,11 @@ information.
 
 # Getting started
 
+Latest release version
+* <https://github.com/kkibria/slideshow-dist/releases/latest>
+
+
+
 > TODO: We will be generating CLI executable
 > to make slideshow content authoring experience smooth for non-coder people. The current way
 > is really targeted people who has knowledge of npm and node, which might be hard for people who
