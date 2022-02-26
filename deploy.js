@@ -34,7 +34,7 @@ program.command('ghpages')
     program.command('set-version')
     .action(async () => {
         try {
-            await version_msg();
+            await version_msg(true);
         } catch (e) {
             console.error(`error: ${e}`);
         }
