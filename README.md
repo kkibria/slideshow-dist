@@ -17,6 +17,9 @@ information.
 Latest release version
 * <https://github.com/kkibria/slideshow-dist/releases/latest>
 
+Currently there is a false positive windows defender virus scan happening
+for windows version, trying to resolve that issue. 
+
 
 > TODO: We will be generating CLI executable
 > to make slideshow content authoring experience smooth for non-coder people. The current way
