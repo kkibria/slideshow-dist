@@ -1,14 +1,16 @@
 {
   "name": "slideshow",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Slideshow distribution",
   "main": "index.js",
   "bin": "index.js",
   "scripts": {
     "start": "node . open md",
     "publish": "node deploy",
-    "deploy": "node deploy --push",
-    "pkg": "npm exec pkg ."
+    "deploy": "node deploy ghpages --push",
+    "release": "node deploy rls-tag",
+    "set-version": "node deploy set-version",
+    "pkg": "npm run set-version && npm exec pkg ."
   },
   "author": "Khan Kibria",
   "license": "Use for slide presentation allowed",
@@ -39,5 +41,6 @@
       "node14-win-x64"
     ],
     "outputPath": "ss-bin"
-  }
+  },
+  "versionMsg": "0.1.0-4ab44b3"
 }

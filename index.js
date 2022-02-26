@@ -2,15 +2,15 @@
 
 const publish = require('./lib/publish');
 const slideshow = require('./lib/slideshow');
-const pkgjson = require('./package.json');
 const { Command } = require('commander');
 const program = new Command();
 const open = require('open');
+const pkgjson = require('./package.json');
 
 program
     .name('slideshow')
     .description('Easy slideshow presentation in browser')
-    .version(pkgjson.version);
+    .version(`Version: ${pkgjson.versionMsg}`);
 
 program.command('open')
     .description('Starts slideshow server to open presentation')

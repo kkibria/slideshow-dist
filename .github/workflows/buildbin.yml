@@ -18,7 +18,7 @@ jobs:
           npm uninstall node-pre-gyp --save
           npm install @mapbox/node-pre-gyp --save
           npm i pkg
-          npx pkg .
+          npm run pkg
 
       - uses: papeloto/action-zip@v1
         with:
