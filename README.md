@@ -4,7 +4,8 @@
 
 **Slideshow** is markdown based tool to build presentations that can viewed with a modern web browser.
 Markdown is just a text file with easy to understand formatting capabilities.
-Markdown is widely used because of its simplicity. Authoring presentations with markdown becomes quick and simple.
+Markdown is widely used because of its simplicity. Authoring presentations with markdown
+becomes quick and simple.
 If you are new to Markdown, check this [tutorial](https://commonmark.org/help/tutorial/) to get upto
 speed on Markdown formatting capabilities.
 
@@ -15,7 +16,6 @@ information.
 
 Latest release version
 * <https://github.com/kkibria/slideshow-dist/releases/latest>
-
 
 
 > TODO: We will be generating CLI executable
