@@ -10,6 +10,7 @@ aspectratio: 4x3
 Press `Down-arrow` to go to the next slide.
 
 ```$
+title: "Slide Show Demo"
 layout: SingleColumn
 ```
 # SlideShow
@@ -58,7 +59,6 @@ Press `Down-Arrow` to go to the next slide.
 Of course you can also use `Down-Arrow` to go to the next slide.
 
 ```$
-title: "Slide Show Demo"
 layout: SingleColumn
 ```
 
@@ -163,11 +163,11 @@ This is quite nice at times when you have to put a bit more text than a slide ca
 ## Easy to Collaborate
 Build a website to share all your up-to-date presentations quickly.
 
-Everyone has a browser, right?!
+Everyone has a browser, right?! Well, almost anyway.
 
 ## A picture is worth thousand words
 
-You probably are wondering at this point how this SlideShow presentation you are watching is made? What does the text file actually look like?
+You probably are wondering at this point how is this SlideShow presentation you are watching made? What does the text file actually look like?
 
 Take a look at the [`chindex.md`](md/chindex.md) file.
 
