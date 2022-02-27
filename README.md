@@ -6,35 +6,46 @@
 Markdown is just a text file with easy to understand formatting capabilities.
 Markdown is widely used because of its simplicity. Authoring presentations with markdown
 becomes quick and simple.
-If you are new to Markdown, check this [tutorial](https://commonmark.org/help/tutorial/) to get upto
-speed on Markdown formatting capabilities.
 
-Check the online [documentation and demo](https://kkibria.github.io/slideshow-dist/) site for more
-information.
+Check the [demo](https://kkibria.github.io/slideshow-dist/) to see Slideshow in action.
+
+> If you are new to Markdown, check this [tutorial](https://commonmark.org/help/tutorial/)
+> to get up to speed on Markdown formatting capabilities.
 
 # Getting started
 
-## Install for windows 
+Follow installation instructions in next sections as appropriate for your machine.
 
+Check the [User Manual](https://kkibria.github.io/slideshow-dist/?ch=userman) to
+learn how to use Slideshow.
 
-1. Download the [slideshow-win-setup](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win-install.ps1) script.
-2. `Right-click` on the file in windows explorer and select **Run with powershell**.
+## Install for Windows 
 
+Most convenient way to install,
+1. Download the installer, [`slideshow-win-setup`](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win-install.ps1) script.
+2. `Right-click` on the `slideshow-win-setup` file in windows explorer and select **Run with powershell**.
 
-## macos
+The installer will download and install the latest released executable on your machine.  
 
-`/usr/local/bin`
+If you like to manually setup instead, you can download the latest released executable,
+[`slideshow-win.exe`](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win.exe) and place it a folder where the powershell or command line can find it.
 
-Latest release version
-* <https://github.com/kkibria/slideshow-dist/releases/latest>
+## Install for MacOs
+You can download the latest released executable,
+[`slideshow-macos`](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-macos)
+in a folder where the shell can find it. Usually `/usr/local/bin` is a folder you can use
+conveniently.
 
-Currently there is a false positive windows defender virus scan happening
-for windows version, trying to resolve that issue. 
+## Install for Linux
+You can download the latest released executable,
+[`slideshow-linux`](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-linux)
+in a folder where the shell can find it. Usually `/usr/local/bin` is a folder you can use
+conveniently.
 
-> TODO: We will be generating CLI executable
-> to make slideshow content authoring experience smooth for non-coder people. The current way
-> is really targeted people who has knowledge of npm and node, which might be hard for people who
-> just wants to use it.
+# Latest release
+You can find all latest release assets
+[here](https://github.com/kkibria/slideshow-dist/releases/latest).
+
 
 # Install for npm 
 
