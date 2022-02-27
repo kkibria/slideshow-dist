@@ -15,7 +15,7 @@ body {
 
 .remark-slide-content {
     font-size: 20px;
-    padding: 40px 40px 20px 40px;
+    padding: 6% 8% 4% 8%;
 }
 
 .remark-slide-number {
@@ -30,7 +30,7 @@ h2,
 h3 {
     font-family: 'Yanone Kaffeesatz';
     font-weight: 400;
-    margin-bottom: 0;
+    margin-top: 0.5em;
 }
 
 .remark-slide-content h1 {
@@ -151,10 +151,17 @@ blockquote {
     background-color: #eee;
 }
 
+.book h1,
+.book h2,
+.book h3 {
+    margin-top: 0.1em;
+    margin-bottom: 0;
+}
+
 .book-link {
     font-size: 65%;
 }
 
 .page-active {
-    color: rgb(36, 36, 36);
+    color: rgb(204, 35, 139);
 }

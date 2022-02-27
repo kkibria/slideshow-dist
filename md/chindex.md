@@ -1,5 +1,5 @@
 ```$
-title: "Slide Show Demo"
+title: "SlideShow Demo"
 layout: Title
 aspectratio: 4x3
 ```
@@ -10,7 +10,6 @@ aspectratio: 4x3
 Press `Down-arrow` to go to the next slide.
 
 ```$
-title: "Slide Show Demo"
 layout: SingleColumn
 ```
 # SlideShow
@@ -80,7 +79,6 @@ Markdown has become quite popular lately and you can find plenty of sites provid
 internet. You can try this [site](https://www.markdownguide.org/basic-syntax/) to learn Markdown.
 
 ```$
-title: "Slide Show Demo"
 layout: TwoColumn
 footnote: True
 ```
@@ -133,7 +131,6 @@ Front Matter is just a piece of text that looks like the following,
 
 
 ```$
-title: "Slide Show Demo"
 layout: TwoColumn
 autolist: True
 ```
@@ -174,7 +171,7 @@ Take a look at the [`chindex.md`](md/chindex.md) file.
 This is the actual full Markdown source that created this presentation,
 
 ```$
-title: "Slide Show Demo"
+title: "Getting Started"
 layout: SingleColumn
 ```
 # How do I get it? 
