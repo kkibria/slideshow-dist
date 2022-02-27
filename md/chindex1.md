@@ -10,6 +10,7 @@ aspectratio: 4x3
 Press `Down-arrow` to go to the next slide.
 
 ```$
+title: "Slide Show Demo"
 layout: SingleColumn
 ```
 # SlideShow
@@ -27,11 +28,11 @@ prearranged sequence".
 Press `Down-arrow` to go to the next slide.
 
 ```$
-title: "The Source file"
+title: "Slide Show Demo"
 layout: SingleColumn
 nobreak: true
 ```
-# {{title}}
+# The Source file
 
 **The previous slide was made by simply typing the following content in a regular text file,**
 

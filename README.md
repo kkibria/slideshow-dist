@@ -28,8 +28,9 @@ Most convenient way to install,
 
 The installer will download and install the latest released executable on your machine.  
 
-If you like to manually setup instead, you can download the latest released executable,
-[`slideshow-win.exe`](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win.exe) and place it a folder where the powershell or command line can find it.
+> If you like to manually setup instead, you can download the latest released executable,
+> [`slideshow-win.exe`](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win.exe)
+> and place it a folder where the powershell or command line can find it.
 
 ## Install for MacOs
 You can download the latest released executable,
