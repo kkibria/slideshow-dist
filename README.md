@@ -2,10 +2,11 @@
 
 # What is Slideshow?
 
-**Slideshow** is markdown based tool to build presentations that can viewed with a modern web browser.
-Markdown is just a text file with easy to understand formatting capabilities.
-Markdown is widely used because of its simplicity. Authoring presentations with markdown
-becomes quick and simple.
+**Slideshow** is a tool to build presentations using text files that can viewed with
+a modern web browser. The text is written in Markdown format.   
+Markdown provides easy to understand formatting capabilities.
+Markdown is widely used because of its simplicity.
+Authoring presentations with markdown becomes quick and simple.
 
 Check the [demo](https://kkibria.github.io/slideshow-dist/) to see Slideshow in action.
 
