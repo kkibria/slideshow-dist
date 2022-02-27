@@ -3,7 +3,7 @@ title: "Slide Show Demo"
 layout: Title
 aspectratio: 4x3
 ```
-# SlideShow - A simple presentation builder
+# SlideShow - Super fast presentation builder
 
 <img class="s25" src="images/favicon.svg">
 
@@ -83,6 +83,7 @@ internet. You can try this [site](https://www.markdownguide.org/basic-syntax/) t
 ```$
 title: "Slide Show Demo"
 layout: TwoColumn
+footnote: True
 ```
 # Slides and Navigation
 ## How do I make multiple slides?  
@@ -96,15 +97,41 @@ We use simple and practical ways to break the content
 into multiple slides.
 
 - Use Top level headings to create a new slide.
-- Use front matter to create a new group of slides in a particular layout.
+- Use Front Matter to create a new group of slides in a particular layout.
 
-> Did you notice that we have switched just now the layout to a two column mode?
-> It was done with *front matter*. 
-## Navigating thru the slide show is simple
+>- > Did you notice that we have switched, just now, the layout to a ***two column*** mode?
+>- > It was done with ***Front Matter***.
+## Navigating thru the SlideShow presentation is simple
 You can use followings to navigate between the pages:  
 - `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go backward.  
 - `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys to go forward.  
 - `MouseWheel` to go in both directions.
+
+# Front Matter
+
+## Document Organization
+
+* Each SlideShow document consists of one or more Slide Groups.
+* Each Slide Group consists of a Front Matter and followed by one or more Slides.
+* The Front Matter contains directives to control layout and
+other properties for all the slides in the group.
+
+Front Matter is just a piece of text that looks like the following,
+
+    ```$
+    title: "Say Something Nice"
+    logo: logo.jpg
+    layout: TwoColumn
+    myname: "Henry Bay"
+    ```
+
+    
+## Structure
+
+<img style="padding: 10px" src="images/frontmatter.svg">
+
+
+
 
 ```$
 title: "Slide Show Demo"
@@ -116,10 +143,18 @@ autolist: True
 ## Simple and quick
 Build your slides with a text file using any text editor you have.
 
-Single column? Two column? No problem.
+Save your content as plain text, SlideShow will do the rest.
+Watch your slide getting updated live in the browser, instantly.
+No need to hit the refresh button.
+
+Change the aspect ratio? Again SlideShow will update as soon as you
+save, instantly. SildeShow will tirelessly monitor your file!
+
+Single column? Two columns? No problem.
 
 > Did you notice how we are using a progressive subheading layout in this slide?
-> Heading to the left, content to the right. It's all automated.
+> Heading to the left, content to the right. It's all automated. No need to
+> create all these progressive slides separately and repeat the work.
 
 ## Adaptive
 The slides are rendered with correct font size automatically to prevent contents from being clipped.
@@ -133,7 +168,7 @@ Everyone has a browser, right?!
 
 ## A picture is worth thousand words
 
-You probably are wondering at this point how was this slideshow made? What does the text file look like?
+You probably are wondering at this point how this SlideShow presentation you are watching is made? What does the text file actually look like?
 
 Take a look at the [`chindex.md`](md/chindex.md) file.
 
@@ -150,16 +185,18 @@ Like it what you have seen so far?
 Want to give it a try?
 
 ## Getting started
-You can start building your slideshow
+You can start building your SlideShow presentation
 right now. Visit our [github](https://github.com/kkibria/slideshow-dist) repository
-to get installation instructions. 
+to get installation instructions.
 
-# Front Matter
-In front of a slide or group of slides we can attach front matter. In the front
-matter you can set values to some predefined properties to control aspects of slide generation.
 
-TODO: properties in front matter
+## User manual
+Once you install, you can head over to the [SlideShow User Manual](?ch=userman)
+to learn how to use the SlideShow tool.
 
-TODO: examples of different layout
+---
 
-TODO: footnote
+### Questions, Feedback, Comments, Ideas
+Visit our github [discussions](https://github.com/kkibria/slideshow-dist/discussions)
+page to say what is in your mind and help build a community of users.
+Your Questions are important, this is where they will be answered.
