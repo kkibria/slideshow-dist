@@ -16,8 +16,14 @@ information.
 
 ## Install for windows 
 
-1. Download the [slideshow-win-setup](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win-setup.ps1) script.
+
+1. Download the [slideshow-win-setup](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win-install.ps1) script.
 2. `Right-click` on the file in windows explorer and select **Run with powershell**.
+
+
+## macos
+
+`/usr/local/bin`
 
 Latest release version
 * <https://github.com/kkibria/slideshow-dist/releases/latest>
@@ -134,4 +140,4 @@ modern websites via plug-ins.
 - Styling support for non CSS savvy people.
 - Add REPL/playground capability.
 
-The future road-map will follow these without a predetermined order.
+The future road-map will follow these in an arbitrary order.
