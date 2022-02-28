@@ -127,9 +127,6 @@ Front Matter is just a piece of text that looks like the following,
 
 <img style="padding: 10px" src="images/frontmatter.svg">
 
-
-
-
 ```$
 layout: TwoColumn
 autolist: True
@@ -168,7 +165,7 @@ You probably are wondering at this point how is this SlideShow presentation you 
 
 Take a look at the 
 <a target="_blank" rel="noopener noreferrer" href="md/chindex.md">`chindex.md`</a> 
- file.
+file.
 
 This is the actual full Markdown source that created this presentation,
 
@@ -184,18 +181,18 @@ Want to give it a try?
 
 ## Getting started
 You can start building your SlideShow presentation
-right now. Visit our [github](https://github.com/kkibria/slideshow-dist) repository
-to get installation instructions.
-
-
-## User manual
-Once you install, you can head over to the
+right now.
+Head over to the
 <a target="_blank" rel="noopener noreferrer" href="?ch=userman">SlideShow User's Manual</a> 
-to learn how to use the SlideShow tool.
+to learn how to install and use the SlideShow tool.
+
+## Github
+Visit our [github](https://github.com/kkibria/slideshow-dist) repository
+if you are interested.
 
 ---
 
-### Questions, Feedback, Comments, Ideas
+### Questions, Feedback, Comments, Ideas...
 Visit our github [discussions](https://github.com/kkibria/slideshow-dist/discussions)
 page to say what is in your mind and help build a community of users.
-Your Questions are important, this is where they will be answered.
+Your questions are important, this is where they will be answered.

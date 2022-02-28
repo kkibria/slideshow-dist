@@ -16,7 +16,8 @@ book: True
 ```
 # {{title}}
 ### Introduction
-Although some knowledge of Markdown is good starting
+
+Although some knowledge of Markdown is a good starting
 point, good grasp of Markdown format will allow
 you to be fluent in creating effective presentations.
 
@@ -87,9 +88,11 @@ For example in Windows PowerShell, type in:
 slideshow-win open c:\my_slides
 ```
 
-It will open the browser to render `chindex.md` contents. Use the url provided
-by the CLI manually if browser did not open.
-You should be seeing the text you typed in `chindex.md` file rendered in the browser window. Keep this
+It will try to open its url in browser to render `chindex.md` contents.
+In case browser did not open the url, copy the url provided
+by the CLI manually. 
+You should be seeing the text you typed in `chindex.md` file
+rendered in the browser window. Keep this
 window open.
 
 Note that, `open` is a subcommand of the CLI tool.
@@ -99,18 +102,19 @@ You can get list of all the subcommands by typing,
 slideshow-win help
 ```
 
-
-
-
-
 ## Live refresh
 
-The CLI tool watches the folder it serves. When any file is updated, it triggers a refresh in the browser.
+The CLI tool watches the folder it serves. When any file is updated,
+it triggers a refresh in the browser.
 
-Now open the file, `chindex.md` with the editor, notepad, and add
+Now open the file, `chindex.md` with the text editor, notepad or any other
+editor you like and add
 some more content. Save the content. Now take a look
 in the browser window see the refreshed content.
 
+> The recommended practice in favor of productivity is to resize
+> the editor and the browser to display
+> them side by side and build the SildeShow content.
 
 ## File naming rules
 
@@ -131,7 +135,8 @@ The SlideShow files must be served to be rendered in a browser and you need to
 specify which presentation is to be rendered to the server with an url.
 
 It is done by
-constructing the url in a specific way. Lets assume the base url for the server
+constructing the url in an opinionated, rigid way.
+Let's assume the base url for the server
 is `https://mydomain.org`.
 
 To render `chreport22.md`
@@ -147,17 +152,8 @@ The files are served locally when you are running the CLI tool to author a
 presentation. The base url for the local server is something like `http://localhost:5000`.
 All the same rules we discussed above still apply. 
 
-## The default presentation
-
-The default presentation file name is `chindex.md`.
-If you provide only the base url, something like `https://mydomain.org`, the server
-will automatically send the default presentation file.
-
-If you have only one presentation, then you can save it in `chindex.md`.
-
-If you have several presentations then you can save relative links
-to all your presentations in `chindex.md` so that it can be to used
-as a navigator page.
+> The `?ch=` stands for chapter where the
+> presentations are perceived as chapters of a whole set.
 
 ## Use relative link
 
@@ -181,14 +177,45 @@ Later you may end up
 deploying the content to the cloud and you'll need to do it without breaking
 the content when you deploy.
 
+## The default presentation
+
+The default presentation file name is `chindex.md`.
+If you provide only the base url, something like `https://mydomain.org`, the server
+will automatically send the default presentation file.
+
+### The commonly used pattern
+If you have only one presentation, then you can save it in `chindex.md`.
+
+If you have several presentations then you can save relative links
+to all your presentations in `chindex.md` somewhere so that it can
+be to used
+as a navigator slide. For instance, let's say you have three SlideShow
+presentations, namely `chroadmap.md`, `chreport.md` and
+`chmarket.md`. Then your `chindex.md` could contain following
+markdown text snippet in a slide,
+
+```
+* [Future Roadmap](?ch=roadmap)
+* [Quarterly Report](?ch=report)
+* [Market Analysis](?ch=market)
+```
+
 ## Authoring a presentation
 
 You already can gather enough ideas to build your first presentation by just
-examining the [source](md/chindex.md) of the [demo](?) presentation. As such
+examining the 
+<a target="_blank" rel="noopener noreferrer" href="md/chindex.md">source</a>
+of the [demo](?) presentation. As such
 it will be a good idea to copy the text from the browser and paste it in your
-text editor as a starter file.
+text editor as a starter content and then modify them.
 
-The [source](md/chuserman.md) of this user manual is also good to examine.
+The 
+<a target="_blank" rel="noopener noreferrer" href="md/chuserman.md">source</a>
+of this user manual is also a good file to examine.
+
+Once you start to collect the parts that are most useful
+to you, you can save them for later use as your own starter
+templates.
 
 ## SlideShow content organization
 
@@ -213,7 +240,37 @@ Front Matter is just a piece of text that looks like the following,
     ```
 
 ## Front Matter Variables
-TBD.    
 
+config.template: boolean
+uses content as handlebar template and applied variable defined in front matter 
 
+config.layout:
+- SingleColumn
+- Title
+- TwoColumn
+
+config.autolist: (smart lists only when layout is TwoColumn otherwise its just a variable with some value)
+- if it is string then string added to smart list body as the first item before autolist items.
+- if true then autolist items shows without it.
+
+when autolisted
+mddoc.left contains the top level headings of the page
+
+config.footnote:
+  - boolean value
+if true footnote are extracted from document body and added to mddoc.footnote
+
+when not autolisted we split half and half unless a split point is given
+config.split:
+    integer
+
+config.aspectratio   <w>x<h> format like 16x9
+
+config.title: title for the browser page
+
+config.nobreak
+in a single column page do not break pages using the first level header.
+treats the entire segment as one slide till the next front matter appears.
+
+> title segment never breaks pages using the first level header.
 
