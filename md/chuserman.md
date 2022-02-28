@@ -7,7 +7,7 @@ aspectratio: 16x9
 
 <img class="s25" src="images/favicon.svg">
 
-Press `Rigth-arrow`.
+Press `Right-Arrow`.
 
 ```$
 title: "SlideShow User's Manual"
@@ -155,7 +155,7 @@ All the same rules we discussed above still apply.
 > The `?ch=` stands for chapter where the
 > presentations are perceived as chapters of a whole set.
 
-## Use relative link
+## Use relative links
 
 A relative link is a url like "`?ch=report22`" without the base
 url part in it.
@@ -219,7 +219,6 @@ templates.
 
 ## SlideShow content organization
 
-
 Slides in a SlideShow file are organized in the following manner.
 
 <img style="height: 300px; " src="images/frontmatter.svg">
@@ -239,38 +238,10 @@ Front Matter is just a piece of text that looks like the following,
     myname: "Henry Bay"
     ```
 
-## Front Matter Variables
+### Front Matter directives
 
-config.template: boolean
-uses content as handlebar template and applied variable defined in front matter 
+Each line in the Front matter contains a directive.
 
-config.layout:
-- SingleColumn
-- Title
-- TwoColumn
-
-config.autolist: (smart lists only when layout is TwoColumn otherwise its just a variable with some value)
-- if it is string then string added to smart list body as the first item before autolist items.
-- if true then autolist items shows without it.
-
-when autolisted
-mddoc.left contains the top level headings of the page
-
-config.footnote:
-  - boolean value
-if true footnote are extracted from document body and added to mddoc.footnote
-
-when not autolisted we split half and half unless a split point is given
-config.split:
-    integer
-
-config.aspectratio   <w>x<h> format like 16x9
-
-config.title: title for the browser page
-
-config.nobreak
-in a single column page do not break pages using the first level header.
-treats the entire segment as one slide till the next front matter appears.
-
-> title segment never breaks pages using the first level header.
-
+Check the
+<a target="_blank" rel="noopener noreferrer" href="?ch=frontmatter">Front Matter Reference Manual</a>
+to learn function of these directives and how they are used.
