@@ -163,5 +163,6 @@ blockquote {
 }
 
 .page-active {
-    color: rgb(204, 35, 139);
+    background-color: rgb(211, 180, 199);
+    color: rgb(249, 38, 114);
 }

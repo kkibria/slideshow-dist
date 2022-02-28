@@ -166,7 +166,9 @@ Everyone has a browser, right?! Well, almost anyway.
 
 You probably are wondering at this point how is this SlideShow presentation you are watching made? What does the text file actually look like?
 
-Take a look at the [`chindex.md`](md/chindex.md) file.
+Take a look at the 
+<a target="_blank" rel="noopener noreferrer" href="md/chindex.md">`chindex.md`</a> 
+ file.
 
 This is the actual full Markdown source that created this presentation,
 
@@ -187,7 +189,8 @@ to get installation instructions.
 
 
 ## User manual
-Once you install, you can head over to the [SlideShow User Manual](?ch=userman)
+Once you install, you can head over to the
+<a target="_blank" rel="noopener noreferrer" href="?ch=userman">SlideShow User's Manual</a> 
 to learn how to use the SlideShow tool.
 
 ---
