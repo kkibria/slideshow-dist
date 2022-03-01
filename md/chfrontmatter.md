@@ -12,7 +12,6 @@ Press `Right-Arrow`.
 ```$
 layout: TwoColumn
 book: True
-template: False 
 ```
 # Front Matter Reference Manual
 
@@ -40,46 +39,77 @@ However some variable name have
 preassigned purposes. For instance `layout` is used for controlling
 layout of the slide. 
 
-## Templates
+## Preassigned variables
+In next few sections we will describe the preassigned variables.
+We will use following convention to describe.
 
-You can build a generic slide that can acts as a template,
 ```
-{{ artist }} is a good singer. However {{ artist }}'s
+preAssignedVariable: option1|option2...
+preAssignedVariable: <string> 
+preAssignedVariable: <number>
+preAssignedVariable: pattern
+
+```
+* You are allowed to use only one option from list of options that are separated by `|`.
+* You can enclose the string between double quotes (") for
+readability but double quotes are optional.
+* We will specify what kind of number.
+* Pattern will specify a sequence of numbers and characters in some way.
+For instance, &lt;`abc:number`&gt;`hello` is a pattern,
+in which case `123hello` could be used as a value. SlideShow will extract `abc` as 123
+and use it for the intended function.  
+
+
+## Using Templates
+```
+template: True|False 
+```
+When `True`, template is enabled. When `False`, template is disabled.
+By default template is enabled. 
+
+Templates are very useful feature which allows you make a slide
+with place holders and the fill the place holder at render time.   
+
+For instance, you can have the following template in a slide,
+```
+\{{ artist }} is a good singer. However \{{ artist }}'s
 drummer gets pretty nervous when he is performing in
 front of a microphone.  
 ```
 
-To use this template we can define `artist` and assign a
-value like `John`.
-When this slide is rendered all instances of `artist`
-will replaced by its value.
+To use this template we can define variable `artist` with value `John`.
+At render time, all instances of \{{ `artist` }}
+will be replaced by `John`. In another place you can reuse the template
+and apply a different value.
 
-Now this slide can be reused in another place by simple
-change the variable value. 
-
-
-## Front Matter variables
-
-aspectratio: &lt;width&gt;x&lt;height&gt;
-
+## Configuration variables
+```
+aspectratio: <width:number>x<height:number>
+```
+Sets the aspect ratio of the slides. This can be set only once per file.
+`width` and `height` are positive integers.
 Example: `aspectratio: 16x9`
 
-title: "&lt;string&gt;"
+---
 
-title for the browser page
+```
+title: <string>
+```
+Sets title for the browser page. The string could be any text string.
+You set a different title in each front matter.
 
+---
 
-### Slide layout
-layout: 
-* Title
-* SingleColumn
-* TwoColumn
-
-### TwoColumn variants
-There are three variants,
+```
+layout: Title|SingleColumn|TwoColumn
+```
+Sets the Slide Group layout mode.
+`TwoColumn` has are three variants,
 * Split content
 * Autolist
 * Book
+
+ We will describe the layouts and variants in the following sections.
 
 
 ## Title layout
