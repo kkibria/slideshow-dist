@@ -44,7 +44,7 @@ In next few sections we will describe the preassigned variables.
 We will use following convention to describe.
 
 ```
-preAssignedVariable: option1|option2...
+preAssignedVariable: option1|option2|option3
 preAssignedVariable: <string> 
 preAssignedVariable: <number>
 preAssignedVariable: pattern
@@ -62,10 +62,11 @@ and use it for the intended function.
 
 ## Using Templates
 ```
-template: True|False 
+template: True|False
 ```
+Default value: `True`.
+
 When `True`, template is enabled. When `False`, template is disabled.
-By default template is enabled. 
 
 Templates are very useful feature which allows you make a slide
 with place holders and the fill the place holder at render time.   
@@ -86,9 +87,10 @@ and apply a different value.
 ```
 aspectratio: <width:number>x<height:number>
 ```
+Default value: `16x9`
+
 Sets the aspect ratio of the slides. This can be set only once per file.
 `width` and `height` are positive integers.
-Example: `aspectratio: 16x9`
 
 ---
 
@@ -98,44 +100,92 @@ title: <string>
 Sets title for the browser page. The string could be any text string.
 You set a different title in each front matter.
 
----
+## Layout modes
 
 ```
 layout: Title|SingleColumn|TwoColumn
 ```
+Default value : `SingleColumn`
+
 Sets the Slide Group layout mode.
+
 `TwoColumn` has are three variants,
-* Split content
-* Autolist
-* Book
+* Split content.
+* Autolist.
+* Book.
 
- We will describe the layouts and variants in the following sections.
-
+We will describe the layouts and variants in the following sections.
 
 ## Title layout
+This layout is active when following is set,
+```
+layout: Title
+```
+
+TODO.
 title segment never breaks pages using the first level header.
 
 ## Single column layout
-nobreak:
+This layout is active when following is set,
+```
+layout: SingleColumn
+```
+
+TODO.
+
+In this mode following variable can be used,
+
+```
+nobreak: True|False
+```
 in a single column page do not break pages using the first level header.
 treats the entire segment as one slide till the next front matter appears.
-
-
-
+Default is False.
 ## Split content layout
-By default we split half and half unless a split point is given
-split:
-    integer
+This layout is active when following is set,
+```
+layout: TwoColumn
+```
 
+
+
+
+
+
+
+
+TODO.
+By default we split half and half unless a split point is given
+```
+split: <number>
+```
 ## Autolist layout
+This layout is valid when following is set,
+```
+layout: TwoColumn
+```
+
+
+
+TODO.
 left pane contains the top level headings of the page
 
+```
+autolist: True|False|<string>
+```
 autolist: (smart lists only when layout is TwoColumn otherwise its just a variable with some value)
 - if it is string then string added to smart list body as the first item before autolist items.
 - if true then autolist items shows without it.
 
+Default is False.
+
 ## Book layout
-book: boolean
+TODO.
+```
+book: True|False
+```
+Default is False.
+
 Left pane contains title of all the topics.
 Right pane contains the content of the selected topic. 
 You can sequentially move thru the content by using
@@ -143,13 +193,18 @@ You can sequentially move thru the content by using
 a topic directly by simply clicking on a title in the left pane.
 
 ## Footnotes
-footnote:
-  - boolean value
-if true all footnotes are collected from slide, rendered at the bottom of the slide.
+TODO.
+```
+footnote: True|False
+```
+True enables rendering fooynotes. all footnotes are collected from slide, rendered at the bottom of the slide.
+By default footnote is False. 
 
+```
+>- This is a footnote.
+```
 
-
-
+>- This is a footnote.
 
 ## Templating 
 template: boolean
