@@ -214,8 +214,11 @@ The
 of this user manual is also a good file to examine.
 
 Once you start to collect the parts that are most useful
-to you, you can save them for later use as your own starter
-templates.
+to you, you can save them for later time to be used as your own starter
+content.
+
+It is good to try different markdown texts, different layouts and learn
+thru observing the cause and effect.
 
 ## SlideShow content organization
 
@@ -245,3 +248,8 @@ Each line in the Front matter contains a directive.
 Check the
 <a target="_blank" rel="noopener noreferrer" href="?ch=frontmatter">Front Matter Reference Manual</a>
 to learn function of these directives and how they are used.
+
+> As an exercise, try to figure out how you can see the
+> source file for the Front Matter Reference Manual.  
+> Hint: try to correlate the url for this manual and
+> the url of its source file to get a clue.

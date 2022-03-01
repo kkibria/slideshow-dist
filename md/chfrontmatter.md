@@ -15,10 +15,22 @@ book: True
 ```
 # Front Matter Reference Manual
 
-Each line in Front Matter allows to use a variable name and assign a value to it in the following
+Slides in a SlideShow file are organized in the following manner.
+
+<img style="height: 300px; " src="images/frontmatter.svg">
+
+* Each SlideShow document consists of one or more Slide Groups.
+* Each Slide Group consists of a Front Matter followed by one or more Slides.
+* The Front Matter contains directives to control layout and
+other properties for all the slides in the group.
+
+## Front Matter format
+
+Each line in Front Matter allows to use a variable name and assign a value 
+to the variable in the following
 format,
 ```
-<variable name>: <value> 
+<variable-name>: <value> 
 ```
 
 Example:
@@ -31,13 +43,13 @@ Example:
     ```
 
 Here variable `title` is assigned a string value "`Say Something Nice`".
-Similarly, `layout` is assigned a value `TwoColumn`.
+Similarly, `layout` is assigned a value `TwoColumn` here.
 Values could be are strings, numbers, True or False.
 
 You can define any variable name. All variables can be used for templates.
-However some variable name have
+However some variables have
 preassigned purposes. For instance `layout` is used for controlling
-layout of the slide. 
+layout of the slide.
 
 ## Preassigned variables
 In next few sections we will describe the preassigned variables.
@@ -59,18 +71,16 @@ For instance, &lt;`abc:number`&gt;`hello` is a pattern,
 in which case `123hello` could be used as a value. SlideShow will extract `abc` as 123
 and use it for the intended function.  
 
-
 ## Using Templates
 ```
 template: True|False
 ```
 Default value: `True`.
 
-When `True`, template is enabled. When `False`, template is disabled.
+When `True`, template function is enabled. When `False`, template function is disabled.
 
-Templates are very useful feature which allows you make a slide
-with place holders and the fill the place holder at render time.   
-
+Templates are very useful feature which allows you to make a slide
+with place holders and the fill the place holder at render time.
 For instance, you can have the following template in a slide,
 ```
 \{{ artist }} is a good singer. However \{{ artist }}'s
@@ -78,10 +88,11 @@ drummer gets pretty nervous when he is performing in
 front of a microphone.  
 ```
 
-To use this template we can define variable `artist` with value `John`.
-At render time, all instances of \{{ `artist` }}
-will be replaced by `John`. In another place you can reuse the template
-and apply a different value.
+To use this template we can define a variable named `artist` with value `John`.
+As a result, all instances of \{{ `artist` }}
+will be replaced by `John` at slide render time.
+This way, you can reuse the same template at different places
+while applying different values.
 
 ## Configuration variables
 ```
@@ -100,21 +111,16 @@ title: <string>
 Sets title for the browser page. The string could be any text string.
 You set a different title in each front matter.
 
-## Layout modes
+---
 
 ```
-layout: Title|SingleColumn|TwoColumn
+layout: Title|SingleColumn|TwoColumn|AutoList|Book
 ```
 Default value : `SingleColumn`
 
 Sets the Slide Group layout mode.
 
-`TwoColumn` has are three variants,
-* Split content.
-* Autolist.
-* Book.
-
-We will describe the layouts and variants in the following sections.
+We will describe each layout mode in the following sections.
 
 ## Title layout
 This layout is active when following is set,
@@ -146,14 +152,6 @@ This layout is active when following is set,
 ```
 layout: TwoColumn
 ```
-
-
-
-
-
-
-
-
 TODO.
 By default we split half and half unless a split point is given
 ```
@@ -162,29 +160,27 @@ split: <number>
 ## Autolist layout
 This layout is valid when following is set,
 ```
-layout: TwoColumn
+layout: AutoList
 ```
-
-
-
-TODO.
 left pane contains the top level headings of the page
 
 ```
-autolist: True|False|<string>
+sectionlistintro: <string>
 ```
-autolist: (smart lists only when layout is TwoColumn otherwise its just a variable with some value)
-- if it is string then string added to smart list body as the first item before autolist items.
-- if true then autolist items shows without it.
+- smart list body as the first item before autolist items.
 
-Default is False.
+TODO.
+
+
 
 ## Book layout
+This layout is valid when following is set,
+```
+layout: Book
+```
 TODO.
-```
-book: True|False
-```
-Default is False.
+
+sectionlistintro: <string>
 
 Left pane contains title of all the topics.
 Right pane contains the content of the selected topic. 
