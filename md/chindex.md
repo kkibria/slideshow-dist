@@ -114,11 +114,11 @@ slides.
 You can use followings to navigate between the pages:  
 - `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go
   backward.  
+- Swipe left in mobile or touchscreen to go backward.
 - `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys
   to go forward.  
+- Swipe right in mobile or touchscreen to go forward.
 - `MouseWheel` to go in both directions.
-- `swipe-left` and `swipe-right` for mobile and touchscreen
-  to go in both directions.
 
 # Front Matter
 
@@ -175,7 +175,8 @@ layout styles.
 
 - Will apply a single column layout.
 - For every top level heading it will create a new slide.
-- Will apply wide screen format, 16x9, the most commonly used aspect ratio.
+- Will apply wide screen format, 16x9, the most commonly
+  used aspect ratio.
 
 ```$
 layout: AutoList
