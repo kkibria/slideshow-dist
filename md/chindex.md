@@ -123,7 +123,7 @@ You can use followings to navigate between the pages:
 * Each SlideShow document consists of one or more Slide
   Groups.
 * Each Slide Group consists of a Front Matter and followed
-  by one or more Slides.
+  by one or more slides.
 * The Front Matter contains directives to control layout and
   other properties for all the slides in the group.
 

@@ -48,7 +48,7 @@ Most convenient way to install,
    [`slideshow-win-setup`](https://github.com/kkibria/slideshow-dist/releases/latest/download/slideshow-win-install.ps1) 
    script.
 2. `Right-click` on the `slideshow-win-setup` file in
-   windows explorer and select **Run with powershell**.
+   windows explorer and select **Run with PowerShell**.
 
 The installer will download and install the latest released
 executable on your machine.
@@ -253,7 +253,9 @@ manner.
   other properties for all the slides in the group.
 
 ## Front Matter
-Front Matter is just a piece of text that looks like the following,
+
+Front Matter is just a piece of text that looks like the
+following,
 
     ```$
     title: "Say Something Nice"
@@ -268,7 +270,8 @@ Each line in the Front matter contains a directive.
 
 Check the
 <a target="_blank" rel="noopener noreferrer" href="?ch=frontmatter">Front Matter Reference Manual</a>
-to learn function of these directives and how they are used.
+to learn the function of these directives and how they are
+used.
 
 > As an exercise, try to figure out how you can see the
 > source file for the Front Matter Reference Manual.  
