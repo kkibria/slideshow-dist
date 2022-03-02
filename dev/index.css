@@ -78,6 +78,10 @@ code {
     border-radius: 5px;
 }
 
+p code{
+    color: brown;
+}
+
 .remark-code,
 .remark-inline-code {
     font-family: 'Ubuntu Mono';

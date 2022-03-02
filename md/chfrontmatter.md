@@ -10,25 +10,27 @@ aspectratio: 16x9
 Press `Right-Arrow`.
 
 ```$
-layout: TwoColumn
-book: True
+layout: Book
+footnote: True
 ```
 # Front Matter Reference Manual
 
-Slides in a SlideShow file are organized in the following manner.
+Slides in a SlideShow file are organized in the following
+manner.
 
 <img style="height: 300px; " src="images/frontmatter.svg">
 
-* Each SlideShow document consists of one or more Slide Groups.
-* Each Slide Group consists of a Front Matter followed by one or more Slides.
+* Each SlideShow document consists of one or more Slide
+  Groups.
+* Each Slide Group consists of a Front Matter followed by
+  one or more Slides.
 * The Front Matter contains directives to control layout and
-other properties for all the slides in the group.
+  other properties for all the slides in the group.
 
 ## Front Matter format
 
-Each line in Front Matter allows to use a variable name and assign a value 
-to the variable in the following
-format,
+Each line in Front Matter allows to use a variable name and
+assign a value to the variable in the following format,
 ```
 <variable-name>: <value> 
 ```
@@ -42,17 +44,20 @@ Example:
     myname: "Henry Bay"
     ```
 
-Here variable `title` is assigned a string value "`Say Something Nice`".
-Similarly, `layout` is assigned a value `TwoColumn` here.
-Values could be are strings, numbers, True or False.
+Here variable `title` is assigned a string value `Say
+Something Nice`. Similarly, `layout` is assigned a value
+`TwoColumn` here. Values could be are strings, numbers, True
+or False.
 
-You can define any variable name. All variables can be used for templates.
-However some variables have
-preassigned purposes. For instance `layout` is used for controlling
-layout of the slide.
+You can define any variable name. All variables can be used
+for templates.
+However some variables have *preassigned* purposes. 
+For instance `layout` is used for controlling layout of the
+slide.
 
 ## Preassigned variables
-In next few sections we will describe the preassigned variables.
+In next few sections we will describe the preassigned
+variables.
 We will use following convention to describe.
 
 ```
@@ -62,14 +67,18 @@ preAssignedVariable: <number>
 preAssignedVariable: pattern
 
 ```
-* You are allowed to use only one option from list of options that are separated by `|`.
+* You are allowed to use only one option from list of
+  options that are separated by `|`.
 * You can enclose the string between double quotes (") for
-readability but double quotes are optional.
+  readability but double quotes are optional.
 * We will specify what kind of number.
-* Pattern will specify a sequence of numbers and characters in some way.
-For instance, &lt;`abc:number`&gt;`hello` is a pattern,
-in which case `123hello` could be used as a value. SlideShow will extract `abc` as 123
-and use it for the intended function.  
+* Pattern will specify a sequence of numbers and characters
+  in some way.
+
+For instance, &lt;`abc:number`&gt;`hello` is a pattern, in
+which case `123hello` could be used as a value. 
+SlideShow will extract `abc` as 123 and use it for the
+intended function.  
 
 ## Using Templates
 ```
@@ -77,30 +86,35 @@ template: True|False
 ```
 Default value: `True`.
 
-When `True`, template function is enabled. When `False`, template function is disabled.
+When `True`, template function is enabled. When `False`,
+template function is disabled.
 
-Templates are very useful feature which allows you to make a slide
-with place holders and the fill the place holder at render time.
-For instance, you can have the following template in a slide,
+Templates are a useful feature which allows you to make a
+slide with place holders and the fill the place holder at
+render time.
+For instance, you can have the following template in a
+slide,
 ```
 \{{ artist }} is a good singer. However \{{ artist }}'s
 drummer gets pretty nervous when he is performing in
 front of a microphone.  
 ```
 
-To use this template we can define a variable named `artist` with value `John`.
-As a result, all instances of \{{ `artist` }}
-will be replaced by `John` at slide render time.
-This way, you can reuse the same template at different places
-while applying different values.
+To use this template we can define a variable named `artist`
+with value `John`.
+As a result, all instances of \{{ `artist` }} will be
+replaced by `John` at slide render time. 
 
+This way, you can reuse the same template at different
+places with different values applied.
 ## Configuration variables
 ```
 aspectratio: <width:number>x<height:number>
 ```
 Default value: `16x9`
 
-Sets the aspect ratio of the slides. This can be set only once per file.
+Sets the aspect ratio of the slides. This can be set only
+once per file.
 `width` and `height` are positive integers.
 
 ---
@@ -108,8 +122,9 @@ Sets the aspect ratio of the slides. This can be set only once per file.
 ```
 title: <string>
 ```
-Sets title for the browser page. The string could be any text string.
-You set a different title in each front matter.
+Sets title for the browser page. The string could be any
+text string.
+You can set a different title in each Front Matter.
 
 ---
 
@@ -123,86 +138,149 @@ Sets the Slide Group layout mode.
 We will describe each layout mode in the following sections.
 
 ## Title layout
-This layout is active when following is set,
+`Title` layout is active when the following is set,
 ```
 layout: Title
 ```
 
-TODO.
-title segment never breaks pages using the first level header.
+This layout centers its contents both vertically and
+horizontally. 
+Also it does not create a new slide for every top level
+heading. 
+As such, In this Slide Group there will be only one slide.
 
 ## Single column layout
-This layout is active when following is set,
+`SingleColumn` layout is active when the following is set,
 ```
 layout: SingleColumn
 ```
 
-TODO.
+This layout produces a single column which spans the entire
+width of the slide.
 
-In this mode following variable can be used,
+Following variable is used to control how a top level heading is used in this layout, 
 
 ```
 nobreak: True|False
 ```
-in a single column page do not break pages using the first level header.
-treats the entire segment as one slide till the next front matter appears.
-Default is False.
-## Split content layout
-This layout is active when following is set,
+Default value : `False`
+
+If `False` it will create a new slide for every top level heading. 
+
+If `True` it does not create a new slide for every top level
+heading.
+In this case the Slide Group will contain only one slide
+rendering everything inside it.
+
+## Two column layout
+`TwoColumn` layout is active when the following is set,
 ```
 layout: TwoColumn
 ```
-TODO.
-By default we split half and half unless a split point is given
+
+This layout arranges the content using two columns of equal width side by side.
+
+By default, half of the second level headings and their contents are displayed in the left pane and the rest in the right pane. This split point can be changed by using the following variable,
+
 ```
 split: <number>
 ```
+
+The value is a positive integer. 
+For instance, if the value is `3` then the first 3 second
+level headings and their contents will be rendered in the
+left pane and the remaining will be placed in the right
+pane.
+
+This can be useful to balance the content in a  visually
+pleasing way when some headings contains more content than
+others.
+
 ## Autolist layout
-This layout is valid when following is set,
+
+`AutoList` layout is valid when the following is set,
 ```
 layout: AutoList
 ```
-left pane contains the top level headings of the page
+
+The algorithm for this layout creates a variable,
+`sectionlist`, and gathers the top level heading and all the
+following second level headings in a list called *section
+list* which becomes the value of the variable. This variable
+can be applied to templates as any other Front Matter
+variable. 
+
+This layout contains two columns.
+For each second level heading it creates a new slide where
+the content under this second level heading is placed in the
+right pane while the left pane holds the *section list*. 
+The left pane is shaded to give visual cue as slides advance.
+
+If there is no text between the top level heading and the immediate following second level heading then SlideShow will insert following the default content between those two headings,
 
 ```
-sectionlistintro: <string>
+\{{ sectionlistintro }}
+\{{ sectionlist }}
 ```
-- smart list body as the first item before autolist items.
-
-TODO.
-
-sectionlist
-
+You can assign `sectionlistintro` in the Front Matter if you like. 
 ## Book layout
-This layout is valid when following is set,
+
+`Book` layout is valid when the following is set,
 ```
 layout: Book
 ```
-TODO.
 
-sectionlistintro: <string>
+The `Book` layout is exactly same as `AutoList` layout with
+the following exception.
 
-Left pane contains title of all the topics.
-Right pane contains the content of the selected topic. 
-You can sequentially move thru the content by using
-`Up-Arrow` or `Down-Arrow`. You can also go to
-a topic directly by simply clicking on a title in the left pane.
+All the headings in the left pane are clickable hyperlink.
+You can navigate to a topic directly by simply clicking on a
+title in the left pane.
 
 ## Footnotes
-TODO.
+Footnote generation is controlled by the following,
 ```
 footnote: True|False
 ```
-True enables rendering fooynotes. all footnotes are collected from slide, rendered at the bottom of the slide.
-By default footnote is False. 
+Default value : `False`
 
-```
+`True` enables rendering footnotes. All footnote markups
+will be collected from slide and will be rendered at the
+bottom of the slide.
+
+`False` disables footnote rendering and the markup will be
+rendered as regular content in-place.
+
+Footnote markup looks like following,
+
+    >- This is a footnote.
+
 >- This is a footnote.
-```
 
->- This is a footnote.
+When enabled it is rendered as regular text as you see at
+the very bottom of this slide.
+When footnote is disabled, this is rendered as,
 
-## Templating 
-template: boolean
-uses content as handlebar template and applied variable defined in front matter 
+> - This is a footnote.
 
+
+## Advanced Templating 
+
+In the Front Matter, variable and value assignments we
+use are actually in a widely used format called `YAML`.
+There are plenty of information and tutorial about this
+format you can find in the internet.
+Here is a
+[cheatsheet](https://lzone.de/cheat-sheet/YAML)
+that you can check.
+
+SlideShow uses 
+[handlebars](https://handlebarsjs.com/) 
+for template processing. 
+A `YAML` parser is used to convert the Front Matter to a
+data structure that feeds `handlebars` the information for
+replacing the place holders.
+
+`handlebars` is very rich in features. 
+You can use those features to develop powerful time saving
+data driven contents when you need it.

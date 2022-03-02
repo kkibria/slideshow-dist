@@ -20,9 +20,11 @@ layout: SingleColumn
 
 ## Definition
 
-According to [wikipedia](https://en.wikipedia.org/wiki/Slide_show), "A slide show is a presentation
-of a series of still images on a projection screen or electronic display device, typically in a
-prearranged sequence". 
+According to 
+[wikipedia](https://en.wikipedia.org/wiki/Slide_show), 
+"A slide show is a presentation of a series of still images
+on a projection screen or electronic display device,
+typically in a prearranged sequence". 
 
 Press `Down-arrow` to go to the next slide.
 
@@ -33,7 +35,8 @@ nobreak: true
 ```
 # {{title}}
 
-**The previous slide was made by simply typing the following content in a regular text file,**
+**The previous slide was made by simply typing the following
+content in a regular text file,**
 
 ```
 # SlideShow
@@ -53,9 +56,11 @@ device, typically in a prearranged sequence".
 Press `Down-Arrow` to go to the next slide.
 ```
 
-**Feel free to cross check by going back to the previous slide by pressing `Up-Arrow`.**
+**Feel free to cross check by going back to the previous
+slide by pressing `Up-Arrow`.**
 
-Of course you can also use `Down-Arrow` to go to the next slide.
+Of course you can also use `Down-Arrow` to go to the next
+slide.
 
 ```$
 layout: SingleColumn
@@ -65,18 +70,22 @@ layout: SingleColumn
 
 ## The content in the text file is actually in a format called Markdown. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing.
-You can control the display of the document such as, 
+Markdown is a lightweight and easy-to-use syntax for styling
+your writing. You can control the display of the document
+such as, 
 - Formatting words as **bold** or *italic*
 - Adding images
 - Creating lists
 
-are just a few of the things we can do with Markdown.
+These are just a few of the things we can do with Markdown.
 
 ### Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like ``#`` or ``*``.
 
-Markdown has become quite popular lately and you can find plenty of sites providing tutorial in the
-internet. You can try this [site](https://www.markdownguide.org/basic-syntax/) to learn Markdown.
+Markdown has become quite popular lately and you can find
+plenty of sites providing tutorial in the internet. 
+You can try this 
+[site](https://www.markdownguide.org/basic-syntax/) 
+to learn Markdown.
 
 ```$
 layout: TwoColumn
@@ -85,19 +94,22 @@ footnote: True
 # Slides and Navigation
 ## How do I make multiple slides?  
 
-Do I need to make one text file for each slide? That might be a lot of files!
+Do I need to make one text file for each slide? That might
+be a lot of files!
 
 Worry no more.
 
-A single Markdown file can contain all your slides.
-We use simple and practical ways to break the content
-into multiple slides.
+A single Markdown file can contain all your slides. We use
+simple and practical ways to break the content into multiple
+slides.
 
-- Use Top level headings to create a new slide.
-- Use Front Matter to create a new group of slides in a particular layout.
+- Use top level headings to create new slides.
+- Use Front Matter to create a new group of slides in a
+  particular layout.
 
 >- > Did you notice that we have switched, just now, the layout to a ***two column*** mode?
 >- > It was done with ***Front Matter***.
+
 ## Navigating thru the SlideShow presentation is simple
 You can use followings to navigate between the pages:  
 - `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go backward.  
@@ -108,12 +120,15 @@ You can use followings to navigate between the pages:
 
 ## Document Organization
 
-* Each SlideShow document consists of one or more Slide Groups.
-* Each Slide Group consists of a Front Matter and followed by one or more Slides.
+* Each SlideShow document consists of one or more Slide
+  Groups.
+* Each Slide Group consists of a Front Matter and followed
+  by one or more Slides.
 * The Front Matter contains directives to control layout and
-other properties for all the slides in the group.
+  other properties for all the slides in the group.
 
-Front Matter is just a piece of text that looks like the following,
+Front Matter is just a piece of text that looks like the
+following,
 
     ```$
     title: "Say Something Nice"
@@ -128,8 +143,38 @@ Front Matter is just a piece of text that looks like the following,
 <img style="padding: 10px" src="images/frontmatter.svg">
 
 ```$
-layout: TwoColumn
-autolist: True
+layout: SingleColumn
+```
+
+# What if?
+
+## I just want a simple presentation!
+
+Do I still need a Front Matter? It sounds like a bit more
+work than I need.
+
+You are absolutely right!
+
+So, the answer is, rest assured. 
+No, you don't need a Front Matter.
+Why should you be penalized for features that you don't use?   
+
+If you didn't put any Front Matter, the SlideShow will treat
+your entire SlideShow content as one single Slide Group and
+it will apply the default Front Matter to the Slide Group
+behind the scene.
+
+Front Matter is necessary only when you want to use multiple
+layout styles.
+
+## Default Front Matter
+
+- Will apply a single column layout.
+- For every top level heading it will create a new slide.
+- Wide screen (16x9), the most commonly used aspect ratio.
+
+```$
+layout: AutoList
 ```
 # What are the benefits?
 
@@ -150,24 +195,30 @@ Single column? Two columns? No problem.
 > create all these progressive slides separately and repeat the work.
 
 ## Adaptive
-The slides are rendered with correct font size automatically to prevent contents from being clipped.
+The slides are rendered with correct font size automatically
+to prevent contents from being clipped.
 
-This is quite nice at times when you have to put a bit more text than a slide can fit!
+This is quite nice at times when you have to put a bit more
+text than a slide can fit!
 
 ## Easy to Collaborate
-Build a website to share all your up-to-date presentations quickly.
+Build a website to share all your up-to-date presentations
+quickly.
 
 Everyone has a browser, right?! Well, almost anyway.
 
 ## A picture is worth thousand words
 
-You probably are wondering at this point how is this SlideShow presentation you are watching made? What does the text file actually look like?
+You probably are wondering at this point how is this
+SlideShow presentation you are watching made? What does the
+text file actually look like?
 
 Take a look at the 
 <a target="_blank" rel="noopener noreferrer" href="md/chindex.md">`chindex.md`</a> 
 file.
 
-This is the actual full Markdown source that created this presentation,
+This is the actual full Markdown source that created this
+presentation,
 
 ```$
 title: "Getting Started"
@@ -180,19 +231,23 @@ Like it what you have seen so far?
 Want to give it a try?
 
 ## Getting started
-You can start building your SlideShow presentation
-right now.
+You can start building your SlideShow presentation right
+now.
 Head over to the
 <a target="_blank" rel="noopener noreferrer" href="?ch=userman">SlideShow User's Manual</a> 
 to learn how to install and use the SlideShow tool.
 
 ## Github
-Visit our [github](https://github.com/kkibria/slideshow-dist) repository
-if you are interested.
+Visit our 
+[github](https://github.com/kkibria/slideshow-dist) 
+repository if you are interested.
 
 ---
 
 ### Questions, Feedback, Comments, Ideas...
-Visit our github [discussions](https://github.com/kkibria/slideshow-dist/discussions)
-page to say what is in your mind and help build a community of users.
-Your questions are important, this is where they will be answered.
+Visit our github 
+[discussions](https://github.com/kkibria/slideshow-dist/discussions)
+page to say what is in your mind and help build a community
+of users.
+Your questions are important, this is where they will be
+answered.
