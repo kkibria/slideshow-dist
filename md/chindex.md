@@ -7,7 +7,7 @@ aspectratio: 4x3
 
 <img class="s25" src="images/favicon.svg">
 
-Press `Down-arrow` to go to the next slide.
+Press `Down-arrow` or swipe right to go to the next slide.
 
 ```$
 layout: SingleColumn
