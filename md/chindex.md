@@ -112,9 +112,13 @@ slides.
 
 ## Navigating thru the SlideShow presentation is simple
 You can use followings to navigate between the pages:  
-- `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go backward.  
-- `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys to go forward.  
+- `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go
+  backward.  
+- `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys
+  to go forward.  
 - `MouseWheel` to go in both directions.
+- `swipe-left` and `swipe-right` for mobile and touchscreen
+  to go in both directions.
 
 # Front Matter
 
@@ -179,14 +183,17 @@ layout: AutoList
 # What are the benefits?
 
 ## Simple and quick
-Build your slides with a text file using any text editor you have.
+
+Build your slides with a text file using any text editor you
+have.
 
 Save your content as plain text, SlideShow will do the rest.
-Watch your slide getting updated live in the browser, instantly.
-No need to hit the refresh button.
+Watch your slide getting updated live in the browser,
+instantly. No need to hit the refresh button.
 
-Change the aspect ratio? Again SlideShow will update as soon as you
-save, instantly. SildeShow will tirelessly monitor your file!
+Change the aspect ratio? Again SlideShow will update as soon
+as you save, instantly. SildeShow will tirelessly monitor
+your file!
 
 Single column? Two columns? No problem.
 
@@ -195,6 +202,7 @@ Single column? Two columns? No problem.
 > create all these progressive slides separately and repeat the work.
 
 ## Adaptive
+
 The slides are rendered with correct font size automatically
 to prevent contents from being clipped.
 
@@ -202,10 +210,16 @@ This is quite nice at times when you have to put a bit more
 text than a slide can fit!
 
 ## Easy to collaborate
+
 Build a website to share all your up-to-date presentations
 quickly.
 
-Everyone has a browser, right?! Well, almost anyway.
+Everyone has a browser, right?! Well, almost everyone
+anyway.
+
+### Mobile and touchscreen support
+
+Swipe to navigate.
 
 ## A picture is worth thousand words
 
