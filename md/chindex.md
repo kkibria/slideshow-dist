@@ -171,7 +171,7 @@ layout styles.
 
 - Will apply a single column layout.
 - For every top level heading it will create a new slide.
-- Wide screen (16x9), the most commonly used aspect ratio.
+- Will apply wide screen format, 16x9, the most commonly used aspect ratio.
 
 ```$
 layout: AutoList
@@ -201,7 +201,7 @@ to prevent contents from being clipped.
 This is quite nice at times when you have to put a bit more
 text than a slide can fit!
 
-## Easy to Collaborate
+## Easy to collaborate
 Build a website to share all your up-to-date presentations
 quickly.
 
