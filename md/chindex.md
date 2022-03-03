@@ -114,10 +114,10 @@ slides.
 You can use followings to navigate between the pages:  
 - `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go
   backward.  
-- Swipe right in mobile or touchscreen to go backward.
+- Swipe right or down in mobile or touchscreen to go backward.
 - `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys
   to go forward.  
-- Swipe left in mobile or touchscreen to go forward.
+- Swipe left or up in mobile or touchscreen to go forward.
 - `MouseWheel` to go in both directions.
 
 # Front Matter
