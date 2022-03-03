@@ -7,7 +7,7 @@ aspectratio: 4x3
 
 <img class="s25" src="images/favicon.svg">
 
-Press `Down-arrow` or swipe right to go to the next slide.
+Press `Down-arrow` or swipe left to go to the next slide.
 
 ```$
 layout: SingleColumn
@@ -114,10 +114,10 @@ slides.
 You can use followings to navigate between the pages:  
 - `PageUp`, `↑` (`Up-Arrow`), `←` (`Left-Arrow`) keys to go
   backward.  
-- Swipe left in mobile or touchscreen to go backward.
+- Swipe right in mobile or touchscreen to go backward.
 - `PageDown`, `↓` (`Down-Arrow`), `→` (`Right-Arrow`) keys
   to go forward.  
-- Swipe right in mobile or touchscreen to go forward.
+- Swipe left in mobile or touchscreen to go forward.
 - `MouseWheel` to go in both directions.
 
 # Front Matter
