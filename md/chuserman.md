@@ -72,9 +72,9 @@ in a folder where the shell can find it. Usually
 `slideshow-macos`.
 
 `slideshow-macos` uses `xdg-open` command from `xdg-utils`
-to open the browser. If you don't have `xdg-utils` installed
-then either you can install the command or you can manually
-open the browser.
+or `open` command to open the browser. If you don't have
+`xdg-utils` installed then either you can install the
+command or you can manually open the browser.
 
 ## Install for Linux
 ### Linux
