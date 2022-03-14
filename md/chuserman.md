@@ -71,6 +71,11 @@ in a folder where the shell can find it. Usually
 *Make a note that the installed command is*
 `slideshow-macos`.
 
+`slideshow-macos` uses `xdg-open` command from `xdg-utils`
+to open the browser. If you don't have `xdg-utils` installed
+then either you can install the command or you can manually
+open the browser.
+
 ## Install for Linux
 ### Linux
 You can download the latest released executable,
@@ -78,7 +83,13 @@ You can download the latest released executable,
 in a folder where the shell can find it. Usually
 `/usr/local/bin` is a folder you can use conveniently.
 
-*Make a note that the installed command is* `slideshow-linux`.
+*Make a note that the installed command is*
+`slideshow-linux`.
+
+`slideshow-linux` uses `xdg-open` command from `xdg-utils`
+to open the browser. If you don't have the `xdg-utils`
+installed then either you can install the command or you can
+manually open the browser.
 
 ## Running the software
 

@@ -245,12 +245,14 @@ Like it what you have seen so far?
 
 Want to give it a try?
 
-## Getting started
+## Installing & Getting started
+
 You can start building your SlideShow presentation right
 now.
 Head over to the
 <a target="_blank" rel="noopener noreferrer" href="?ch=userman">SlideShow User's Manual</a> 
-to learn how to install and use the SlideShow tool.
+to get installation instructions and learn how to use the
+SlideShow tool.
 
 ## Github
 Visit our 
