@@ -1,0 +1,172 @@
+body {
+    font-family: 'Droid Serif';
+}
+
+.remark-container {
+    background: #d7d8d2;
+    margin: 0;
+    overflow: hidden;
+}
+
+.remark-slide {
+    height: 100%;
+    width: 100%;
+}
+
+.remark-slide-content {
+    font-size: 20px;
+    padding: 6% 8% 4% 8%;
+}
+
+.remark-slide-number {
+    bottom: 12px;
+    opacity: 0.5;
+    position: absolute;
+    right: 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 400;
+    margin-top: 0.5em;
+}
+
+.remark-slide-content h1 {
+    font-size: 3em;
+}
+
+.remark-slide-content h2 {
+    font-size: 2em;
+}
+
+.remark-slide-content h3 {
+    font-size: 1.6em;
+}
+
+.footnote {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top: gray;
+}
+
+li p {
+    line-height: 1.25em;
+}
+
+.red {
+    color: #fa0000;
+}
+
+.large {
+    font-size: 2em;
+}
+
+pre {
+    padding: 10px;
+    background-color: rgb(198, 226, 235);
+}
+
+a,
+a>code {
+    color: rgb(249, 38, 114);
+    text-decoration: none;
+}
+
+code {
+    border-radius: 5px;
+}
+
+p code{
+    color: brown;
+}
+
+.remark-code,
+.remark-inline-code {
+    font-family: 'Ubuntu Mono';
+}
+
+.remark-code-line-highlighted {
+    background-color: #373832;
+}
+
+.pull-left {
+    float: left;
+    width: 47%;
+}
+
+.pull-right {
+    float: right;
+    width: 47%;
+}
+
+.pull-right~p {
+    clear: both;
+}
+
+.inverse {
+    background: #272822;
+    color: #777872;
+    text-shadow: 0 0 20px #333;
+}
+
+.inverse h1,
+.inverse h2 {
+    color: #f3f3f3;
+    line-height: 0.8em;
+}
+
+.inverse .footnote {
+    border-top: lightgray;
+}
+
+.title pre {
+    margin-left: 25%;
+    width: 50%;
+    text-align: left;
+}
+
+.inverse pre {
+    background-color: rgb(99, 99, 99);
+}
+
+.inverse pre code {
+    color: black;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.s25 {
+    width: 25%;
+    height: auto;
+    padding: 30px 0px;
+}
+
+blockquote {
+    border-left: 5px solid gray;
+    padding-left: 1em;
+}
+
+.single-column {
+    background-color: #eee;
+}
+
+.book h1,
+.book h2,
+.book h3 {
+    margin-top: 0.1em;
+    margin-bottom: 0;
+}
+
+.book-link {
+    font-size: 65%;
+}
+
+.page-active {
+    background-color: rgb(211, 180, 199);
+    color: rgb(249, 38, 114);
+}
